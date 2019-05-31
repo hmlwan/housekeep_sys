@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>    <!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -128,59 +128,98 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
 </script>
 
-    <!--/sidebar-->
-    <div class="main-wrap">
-
-        <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Index/index');?>">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">管理员管理</span></div>
-        </div>
-        <div class="search-wrap">
-            <div class="search-content">
-                <form action="<?php echo U('Manage/index');?>" method="post">
-                    <table class="search-tab">
-                        <tr>
-                            <th width="70">管理员:</th>
-                            <td><input class="common-text" placeholder="管理员" name="username" type="text"></td>
-                            <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
-                        </tr>
-                    </table>
-                </form>
-				
-            </div>
-        </div>
-        <div class="result-wrap">
-
-            <div class="result-title">
-                <div class="result-list">
-                    <a href="<?php echo U('Manage/addAdmin');?>"><i class="icon-font"></i>新增管理员</a>
-                </div>
-            </div>
-            <div class="result-content">
-                <table class="result-tab" width="100%">
-                    <tr>
-                        <th>ID</th>
-                        <th>管理员名称</th>
-                        <th>状态</th>
-                        <th>操作</th>
-                    </tr>
-                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                            <td><?php echo ($vo['admin_id']); ?></td>
-                            <td><?php echo ($vo['username']); if(($vo["nav"]) == ""): ?>&nbsp;（此账号尚未分配权限）<?php endif; ?></td>
-                            <td><?php if(($vo["status"]) == "0"): ?>可用<?php else: ?>停用<?php endif; ?></td>
-                            <td>
-                                <a class="link-update" href="<?php echo U('Manage/addAdmin',array('admin_id'=>$vo['admin_id']));?>">修改信息</a>
-                                <a class="link-update" href="<?php echo U('Manage/showNav',array('admin_id'=>$vo['admin_id']));?>">修改权限</a>
-                                <?php if(($vo["admin_id"]) == "1"): else: ?><a class="link-del" href="<?php echo U('Manage/delMember',array('admin_id'=>$vo['admin_id']));?>" onclick="return confirm('确认删除吗？')">删除</a><?php endif; ?>
-                            </td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
-                </table>
-                <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
-            </div>
-
+<style>
+    .glyphicon-minus:before {
+        content: "\2212";
+    }
+    .glyphicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+    }
+</style>
+<!--/sidebar-->
+<div class="main-wrap">
+    <div class="crumb-wrap">
+        <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Index/index');?>">首页</a>
+            <span class="crumb-step">&gt;</span>
+            <span class="crumb-name">系统配置</span>
         </div>
     </div>
-    <!--/main-->
+    <div class="result-wrap">
+        <form action="<?php echo U('Config/updateCofig');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            <input type="hidden" name="sub_flag" value="<?php echo ($sub_flag); ?>" >
+            <div class="config-items">
+                <div class="config-title">
+                    <h1><i class="icon-font">&#xe00a;</i>配置添加</h1>
+                </div>
+                <div class="result-content">
+                    <table width="100%" class="insert-tab">
+                        <tbody>
+                        <tr>
+                            <th><i class="require-red">*</i>标题：</th>
+                            <td><input id="title" name="title" type="text" value="<?php echo ($info["name"]); ?>"  class="common-text"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>英文字段名：</th>
+                            <td><input id="en_name" name="en_name" type="text" value="<?php echo ($info["key"]); ?>"  class="common-text"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>类型：</th>
+                            <td>
+                                <select name="type" id="type" class="common-text">
+                                    <option value="1" <?php if($info['type'] == 1): ?>selected<?php endif; ?> >1-文本</option>
+                                    <option value="2" <?php if($info['type'] == 2): ?>selected<?php endif; ?> >2-图片</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="sub_value" >
+                            <th><i class="require-red">*</i>文本：</th>
+                            <td><input id="sub_value" name="sub_value" type="text" value="<?php echo ($info["value"]); ?>"   class="common-text"></td>
+                        </tr>
+                        <tr class="sub_value_img" style="display: none">
+                            <th><i class="require-red">*</i>图片：</th>
+                            <td><input id="sub_value_img" name="sub_value_img" type="file" value="<?php echo ($info["value"]); ?>"  class="common-text">
+                                <?php if($info['value']): ?><img src="<?php echo ($info['value']); ?>" style="width: 80px;height: 80px" alt=""><?php endif; ?>
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input type="button" onclick="subform()" value="提交" class="btn btn-primary btn6 mr10">
+                                <a href="<?php echo U('Config/index');?>"><input type="button" value="返回"  class="btn btn6"></a>
+                            </td>
+                        </tr>
+                        </tbody></table>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    <script>
+        function subform(){
+            $('#myform').submit();
+        }
+        $("#type").change(function () {
+            if($(this).val() == 1){
+                $(".sub_value").show();
+                $(".sub_value_img").hide();
+            }else{
+                $(".sub_value").hide();
+                $(".sub_value_img").show();
+            }
+        });
+        var type = $("#type").val();
+        $("#type").change();
+
+
+    </script>
 </div>
 </body>
 </html>

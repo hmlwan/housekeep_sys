@@ -171,8 +171,8 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
                         <tr>
                             <th>状态</th>
                             <td>
-                                <input type="radio" value="1" checked name="is_lock" />正常&nbsp;
-                                <input type="radio" value="0" name="is_lock" />禁用
+                                <input type="radio" value="0" checked name="is_lock" />正常&nbsp;
+                                <input type="radio" value="1" name="is_lock" />禁用
                             </td>
                         </tr>
                         <tr>

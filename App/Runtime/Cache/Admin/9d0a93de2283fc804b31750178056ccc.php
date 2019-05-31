@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="/Public/Admin/iconfont/iconfont.css"/>
     <script type="text/javascript" src="/Public/Admin/js/libs/modernizr.min.js"></script>
 	<script type="text/javascript" src="/Public/Admin/js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="/Public/js/layer/layer.js"></script>
-    <script type="text/javascript" src="/Public/js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="/Public/plugin/Js/layer/layer.min.js"></script>
+    <script type="text/javascript" src="/Public/plugin/Js/laydate/laydate.js"></script>
 <style>
 .iconfont{ padding-right:5px;}
 .fsize{ font-size:15px;}

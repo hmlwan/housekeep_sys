@@ -12,90 +12,81 @@ class ConfigController extends AdminController {
 	}
 	
 	public function index(){
-		$list=M('Config')->select();
-		foreach ($list as $k=>$v){
-               $list[$v['key']]=$v['value'];
-				
-		}
-		$this->assign('config',$list);
-       	$this->display();
+
+        $string = I('get.string','','');
+        $string = trim($string);
+        $where = array();
+        if($string){
+            $where['_string'] = "`key`='{$string}' OR `name` like '%{$string}%'";
+        }
+
+        $list = M('config')->where($where)->select();
+        $this->assign('list',$list);
+        $this->display();
      }
-     
-     public function customerService(){
-     	$this->display();
-     }
-     
-     public function shortMessage(){
-     	$this->display();
-     }
-     public function finance(){
-     	$this->display();
-     }
-     public function information(){
-     	$this->display();
-     }
-     
-     
-     public function websiteBank(){
-     	$this->display();
-     }
-     
+
      public function updateCofig(){
-         if($_FILES["logo"]["tmp_name"]){
-                $_POST['logo']=$this->upload($_FILES["logo"]);
-                if (!$_POST['logo']){
-                    $this->error('非法上传');
+	    if(IS_POST){
+	        $type = I('post.type','1','');
+	        $title = I('post.title','','');
+	        $en_name = I('post.en_name','','');
+	        $sub_value = I('post.sub_value','','');
+	        $sub_value_img = I('post.sub_value_img','','');
+	        $sub_flag = I('post.sub_flag','','');
+
+            if(!$title || !$en_name ){
+                $this->error('请输入必填项');
+            }
+
+            if($type == 2){
+                if($_FILES["sub_value_img"]["tmp_name"]){
+                    $sub_value_img  = $this->upload($_FILES["sub_value_img"]);
                 }
-         }
-         if($_FILES["weixin"]["tmp_name"]){
-              $_POST['weixin']=$this->upload($_FILES["weixin"]);
-              if (!$_POST['weixin']){
-                  $this->error('非法上传');
-              }
-         }
-         if (!empty($_POST['friendship_tips'])){
-     	      $_POST['friendship_tips'] = I('post.friendship_tips','','html_entity_decode');
-         }
-         if (!empty($_POST['withdraw_warning'])){
-        	$_POST['withdraw_warning'] = I('post.withdraw_warning','','html_entity_decode');
-         }
-         if (!empty($_POST['risk_warning'])){
-             $_POST['risk_warning'] = I('post.risk_warning','','html_entity_decode');
-         }
-         if (!empty($_POST['VAP_rule'])){
-             $_POST['VAP_rule'] = I('post.VAP_rule','','html_entity_decode');
-         }
-         if (!empty($_POST['disclaimer'])){
-         	$_POST['disclaimer'] = I('post.disclaimer','','html_entity_decode');
-         }
-         if (!empty($_POST['FWTK'])){
-         	$_POST['FWTK'] = I('post.FWTK','','html_entity_decode');
-         }
-         if (!empty($_POST['rolling_num'])){
-             $_POST['rolling_num'] = I('post.rolling_num','','html_entity_decode');
-         }
-         if($_FILES["wx_qrcode"]["tmp_name"]){
-             $_POST['wx_qrcode']=$this->upload($_FILES["wx_qrcode"]);
-             if (!$_POST['wx_qrcode']){
-                 $this->error('非法上传');
-             }
-         }
-         if($_FILES["zfb_qrcode"]["tmp_name"]){
-             $_POST['zfb_qrcode']=$this->upload($_FILES["zfb_qrcode"]);
-             if (!$_POST['zfb_qrcode']){
-                 $this->error('非法上传');
-             }
-         }
-         if($_POST['deposit'] < $_POST['dk_money']){
-             $this->error('押金必须大于系统打款金额');
-         }
-     	foreach ($_POST as $k=>$v){
-     		$rs[]=M('Config')->where(C("DB_PREFIX")."config.key='{$k}'")->setField('value',$v);
-     	}
-     	if($rs){
-     		$this->success('配置修改成功');
-     	}else{
-     		$this->error('配置修改失败');
-     	}
+            }
+
+	        $save_data = array(
+	            'key' => $en_name,
+                'value' => $type == 1? $sub_value : $sub_value_img,
+                'type' => $type,
+                'name' => $title
+            );
+
+	        if($sub_flag){ /*编辑*/
+                if(!$_FILES["sub_value_img"]["tmp_name"]){
+                    unset($save_data['value']);
+                }
+                $res = M("config")->where(array('key'=>$en_name))->save($save_data);
+            }else{ /*新增*/
+                $is_exist = M("config")->where(array('key'=>$en_name))->find();
+                if($is_exist){
+                    $this->error('已存在英文字段名');
+                }
+                $res = M("config")->add($save_data);
+            }
+            if($res){
+                $this->success('配置修改成功',U('index'));
+            }else{
+                $this->error('配置修改失败');
+            }
+        }else{
+            $sub_flag = I('get.sub_flag');
+            $key = I('get.key');
+            $this->assign('sub_flag',$sub_flag);
+
+            $res = M("config")->where(array('key'=>$key))->find();
+            $this->assign('info',$res);
+            $this->display();
+        }
      }
+     public function del(){
+         $key = I('post.key');
+         $res = M("config")->where(array('key'=>$key))->delete();
+         if($res){
+             $this->success('删除成功',U('index'));
+         }else{
+             $this->error('删除失败');
+         }
+
+     }
+
 }

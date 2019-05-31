@@ -29,7 +29,7 @@ class LoginController extends CommonController {
     //登出
     public function loginout(){
     	$_SESSION['admin_userid']=null;
-    	$this->redirect('Login/login');
+    	$this->redirect('Login/index');
     }
      
 }

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-05-20 18:24:11
+Date: 2019-05-31 22:23:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,7 +32,24 @@ CREATE TABLE `blue_admin` (
 -- ----------------------------
 -- Records of blue_admin
 -- ----------------------------
-INSERT INTO `blue_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', null, '1,4,7,8,15,12,16,28,30,18,41,17,50,51,52,53,54,57,58,59,60,69,83,19,20,21', '0');
+INSERT INTO `blue_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', null, '1,4,7,8,15,12,16,23,18,41,17,50,51,52,53,54,57,58,59,60,69,83,19,20,21,22', '0');
+
+-- ----------------------------
+-- Table structure for `blue_apply_task`
+-- ----------------------------
+DROP TABLE IF EXISTS `blue_apply_task`;
+CREATE TABLE `blue_apply_task` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `task_id` int(10) unsigned NOT NULL COMMENT '高单id',
+  `name` varchar(128) DEFAULT '' COMMENT '姓名',
+  `phone` varchar(50) DEFAULT '' COMMENT '手机号码',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--提交时间--',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of blue_apply_task
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `blue_areas`
@@ -3546,158 +3563,115 @@ INSERT INTO `blue_article_category` VALUES ('128', '行业资讯', '0', '', '0',
 INSERT INTO `blue_article_category` VALUES ('129', '项目介绍', '0', '项目介绍', '0', '0');
 
 -- ----------------------------
+-- Table structure for `blue_company_info`
+-- ----------------------------
+DROP TABLE IF EXISTS `blue_company_info`;
+CREATE TABLE `blue_company_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `name` varchar(128) DEFAULT '' COMMENT '名称',
+  `introduce` text COMMENT '简介',
+  `culture` varchar(200) DEFAULT '' COMMENT '企业文化',
+  `service` varchar(1024) NOT NULL DEFAULT '企业服务',
+  `img` varchar(2048) NOT NULL DEFAULT '' COMMENT '服务图片',
+  `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
+  `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of blue_company_info
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `blue_config`
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_config`;
 CREATE TABLE `blue_config` (
   `key` varchar(32) NOT NULL,
-  `value` text NOT NULL
+  `value` text NOT NULL,
+  `type` tinyint(4) DEFAULT '1' COMMENT '类型 1：文本 2：图片',
+  `name` varchar(200) DEFAULT NULL COMMENT '中文名称'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_config
 -- ----------------------------
-INSERT INTO `blue_config` VALUES ('title', '中国网络创业共享网');
-INSERT INTO `blue_config` VALUES ('keywords', '区块链交易平台，买数字资产，数字资产价格，数字资产行情走势，数字资产交易平台');
-INSERT INTO `blue_config` VALUES ('desc', '区块链交易平台是中国最大的数字资产交易平台，坚持为数字资产交易者提供，专业、安全、快捷的交易服务');
-INSERT INTO `blue_config` VALUES ('logo', '/Uploads/Public/Uploads/2019-03-17/5c8dba4d70e2c.png');
-INSERT INTO `blue_config` VALUES ('copyright', '6');
-INSERT INTO `blue_config` VALUES ('record', '5');
-INSERT INTO `blue_config` VALUES ('tel', '官方:');
-INSERT INTO `blue_config` VALUES ('email', '111111111');
-INSERT INTO `blue_config` VALUES ('qqcode', '2522');
-INSERT INTO `blue_config` VALUES ('business_email', '2018 University of Washington | Seattle, WA');
-INSERT INTO `blue_config` VALUES ('name', '中国网络创业共享网');
-INSERT INTO `blue_config` VALUES ('address', '');
-INSERT INTO `blue_config` VALUES ('qq', '');
-INSERT INTO `blue_config` VALUES ('qqqun2', '');
-INSERT INTO `blue_config` VALUES ('qqqun3', '');
-INSERT INTO `blue_config` VALUES ('qqqun1', '');
-INSERT INTO `blue_config` VALUES ('pay_min_money', '300');
-INSERT INTO `blue_config` VALUES ('pay_max_money', '500000');
-INSERT INTO `blue_config` VALUES ('pay_fee', '0');
-INSERT INTO `blue_config` VALUES ('pay_get_name', '王林');
-INSERT INTO `blue_config` VALUES ('pay_get_card', '62166 13100 01398 5810');
-INSERT INTO `blue_config` VALUES ('pay_get_bank', '中国银行');
-INSERT INTO `blue_config` VALUES ('weixin', '/Uploads/Public/Uploads/2018-05-01/5ae825990a40e.gif');
-INSERT INTO `blue_config` VALUES ('weibo', '— ');
-INSERT INTO `blue_config` VALUES ('time_limit', '500');
-INSERT INTO `blue_config` VALUES ('localhost', '');
-INSERT INTO `blue_config` VALUES ('worktime', '工作日:9-19时 节假日:9-18时');
-INSERT INTO `blue_config` VALUES ('qqqun_url', '数字货币可能存在矿工预挖、庄家操控、团队解散、技术缺陷等问题，其价格波动较大，因此我们强烈建议您在自身能承受的风险范围内参与数字货币交易。');
-INSERT INTO `blue_config` VALUES ('fee', '1');
-INSERT INTO `blue_config` VALUES ('CODE_USER_NAME', '22707');
-INSERT INTO `blue_config` VALUES ('CODE_USER_PASS', 'ec3c311f283ecb1efb16a3b22c976592');
-INSERT INTO `blue_config` VALUES ('CODE_NAME', '侗红实业');
-INSERT INTO `blue_config` VALUES ('jihuo', '10000');
-INSERT INTO `blue_config` VALUES ('', 'risk_warning');
-INSERT INTO `blue_config` VALUES ('friendship_tips', '');
-INSERT INTO `blue_config` VALUES ('risk_warning', '<h1>\r\n	<span style=\"font-family: tahoma,;\" color:#666666;background-color:#f8f8f8;font-size:14px;\"=\"\">数字资产可能存在矿工预挖、庄家操控、团队解散、技术缺陷等问题，</span><span style=\"font-family: tahoma,;\" color:#666666;background-color:#f8f8f8;font-size:14px;\"=\"\">其价格波动较大，因此我们强烈建议您在自身能承受的风险范围内参与数字货币交易。</span> \r\n</h1>');
-INSERT INTO `blue_config` VALUES ('biaoge_url', '/Uploads/Public/Uploads/2016-05-18/573c1c0db8176.doc');
-INSERT INTO `blue_config` VALUES ('jiedong_bili', '1');
-INSERT INTO `blue_config` VALUES ('withdraw_warning', '<h3>\r\n	提现最低300元，单日限额50000元\r\n</h3>');
-INSERT INTO `blue_config` VALUES ('invite_rule', '<p>\r\n	<br />\r\n</p>');
-INSERT INTO `blue_config` VALUES ('VAP_rule', '<p>\r\n	T+0交易，随时提现\r\n</p>');
-INSERT INTO `blue_config` VALUES ('transaction_false', '1000');
-INSERT INTO `blue_config` VALUES ('ZC_AWARDS_CURRENCY_ID', '26');
-INSERT INTO `blue_config` VALUES ('ZC_AWARDS_ONE_RATIO', '100');
-INSERT INTO `blue_config` VALUES ('ZC_AWARDS_TWO_RATIO', '50');
-INSERT INTO `blue_config` VALUES ('ZC_AWARDS_STATUS', '1');
-INSERT INTO `blue_config` VALUES ('qq2', '');
-INSERT INTO `blue_config` VALUES ('qq3', '');
-INSERT INTO `blue_config` VALUES ('qq1', '222');
-INSERT INTO `blue_config` VALUES ('EMAIL_HOST', 'https://api.mysubmail.com/mail/send.json');
-INSERT INTO `blue_config` VALUES ('FWTK', '根椐人民银行等有关部委的相关规定，数字资产系特殊的虚拟商品，作为互联网上的商品买卖行为，普通民众在自担风险的前提下拥有参与的自由。数字资产行业目前存在很多不确定，不可控的风险因素（如预挖、暴涨暴跌、庄家操控、团队解散、技术缺陷等），导致交易具有极高的风险。新宇交易平台仅为数字资产等虚拟商品的爱好者提供一个自由的网上交换平台，对于在新宇数字资产平台交换的数字资产等虚拟商品的来源、价值，网站运营方不承担任何审查、担保、赔偿的法律责任。<br />\r\n<br />\r\n请您务必注意以下几点：<br />\r\n<br />\r\n1.警惕虚假宣传，不要听信任何币值会永远上涨的宣传，数字资产作为一种虚拟商品，具有极高的风险，很可能出现价值归零的情况。<br />\r\n<br />\r\n2.对于推广和运营方的市场承诺，需要谨慎判别，目前并没有相关法律能保证其兑现承诺，新宇交易平台不会对任何数字资产进行背书和承诺。<br />\r\n<br />\r\n3.坚决拒绝多层次传销组织，在我国参与该类组织是违法行为，造成的一切后果自负，平台将配合相关执法部门的要求进行调查、取证。<br />\r\n<br />\r\n4.根据《中华人民共和国反洗钱法》等有关法律规定，严格禁止利用平台进行洗钱等违法犯罪活动，平台将配合相关执法部门的要求进行调查、取证。<br />\r\n<br />\r\n5.数字资产和数字积分等虚拟商品所对应的实物财产和持有者享有的权利存在因发行方等义务相关方破产，关闭或违法犯罪等其他经营风险导致无法兑现的风险。<br />\r\n<br />\r\n6.在新宇交易平台注册参与交换的用户，应保证注册身份信息的真实、准确，保证拟交换的数字资产等虚拟商品的来源合法。因信息不真实造成的任何问题，平台概不负责。<br />\r\n<br />\r\n7.因国家法律，法规及政策性文件的制定和修改，导致数字资产等虚拟商品的交易被暂停或者禁止的，由此导致的全部损失由用户自行承担。<br />\r\n<br />\r\n8.请控制风险，不要投入超过您风险承受能力的资金，不要购买您所不了解的数字资产，数字积分等虚拟商品。<br />\r\n<div>\r\n	<br />\r\n</div>\r\n<br />');
-INSERT INTO `blue_config` VALUES ('disclaimer', '第一条<br />\r\n本网站的宗旨是在不违反中华人民共和国法律法规的前提下，尽可能地为中国广大数字资产投资者提供专业的交易服务。 禁止使用本网站从事洗钱、走私、商业贿赂等一切非法交易活动，若发现此类事件，本站将冻结账户，立即报送公安机关。<br />\r\n第二条<br />\r\n当公安机关、检察院、法院等有权机关出示相应的调查文件要求本站配合对指定用户进行调查时， 或对用户账户采取查封、冻结或者划转措施时，本站将按照公安机关的要求协助提供相应的用户数据，或进行相应的操作。 因此而造成的用户隐私泄露、账户不能操作及因此给所造成的损失等，本站不承担任何责任。<br />\r\n第三条<br />\r\n本网站使用者因为违反本声明的规定而触犯中华人民共和国法律的，本站做为服务的提供方，有义务对平台的规则及服务进行完善， 但本站并无触犯中华人民共和国法律的动机和事实，对使用者的行为不承担任何连带责任。<br />\r\n第四条<br />\r\n凡以任何方式登录本网站或直接、间接使用本网站服务者，视为自愿接受本网站声明的约束。<br />\r\n第五条<br />\r\n本声明未涉及的问题参见中华人民共和国有关法律法规，当本声明与中华人民共和国法律法规冲突时，以中华人民共和国法律法规为准。<br />');
-INSERT INTO `blue_config` VALUES ('EMAIL_USERNAME', 'service@sinohancheng.com');
-INSERT INTO `blue_config` VALUES ('EMAIL_PASSWORD', '13307');
-INSERT INTO `blue_config` VALUES ('EMAIL_HOST', 'https://api.mysubmail.com/mail/send.json');
-INSERT INTO `blue_config` VALUES ('chongzhiqq1', '');
-INSERT INTO `blue_config` VALUES ('chongzhiqq2', '');
-INSERT INTO `blue_config` VALUES ('withdraw_min_money', '300');
-INSERT INTO `blue_config` VALUES ('withdraw_max_money', '100000');
-INSERT INTO `blue_config` VALUES ('tcoin_fee', '0.5');
-INSERT INTO `blue_config` VALUES ('jiaoyi_over_hour', '23');
-INSERT INTO `blue_config` VALUES ('jiaoyi_start_minute', '0');
-INSERT INTO `blue_config` VALUES ('jiaoyi_start_hour', '0');
-INSERT INTO `blue_config` VALUES ('jiaoyi_over_minute', '59');
-INSERT INTO `blue_config` VALUES ('CODE_GATE', 'http://api.mysubmail.com/message/send');
-INSERT INTO `blue_config` VALUES ('dayqdnum', '6');
-INSERT INTO `blue_config` VALUES ('dayfknum', '5');
-INSERT INTO `blue_config` VALUES ('deposit', '500.00');
-INSERT INTO `blue_config` VALUES ('wx_qrcode', '/Uploads/Public/Uploads/2019-03-17/5c8dbac8e887b.png');
-INSERT INTO `blue_config` VALUES ('zfb_qrcode', '/Uploads/Public/Uploads/2019-03-17/5c8dba26cce03.png');
-INSERT INTO `blue_config` VALUES ('dk_money', '200');
-INSERT INTO `blue_config` VALUES ('refresh_stars', '3');
-INSERT INTO `blue_config` VALUES ('direct_push_num', '3');
-INSERT INTO `blue_config` VALUES ('team_push_num', '10');
-INSERT INTO `blue_config` VALUES ('commision_rate', '0.1');
-INSERT INTO `blue_config` VALUES ('increase_rate', '0.1');
-INSERT INTO `blue_config` VALUES ('commision_rate', '0.1');
-INSERT INTO `blue_config` VALUES ('promote_num', '3');
-INSERT INTO `blue_config` VALUES ('withdraw_amount', '100');
+INSERT INTO `blue_config` VALUES ('web_title', '中国网络创业共享网', '1', '网站标题');
+INSERT INTO `blue_config` VALUES ('web_keywords', '区块链交易平台，买数字资产，数字资产价格，数字资产行情走势，数字资产交易平台', '1', '网站关键字');
+INSERT INTO `blue_config` VALUES ('web_desc', '区块链交易平台是中国最大的数字资产交易平台，坚持为数字资产交易者提供，专业、安全、快捷的交易服务', '1', '网站描述');
+INSERT INTO `blue_config` VALUES ('web_logo', '/Uploads/Public/Uploads/2019-03-17/5c8dba4d70e2c.png', '2', '网站LOGO');
+INSERT INTO `blue_config` VALUES ('copyright', '6', '1', '版权信息');
+INSERT INTO `blue_config` VALUES ('record', '5', '1', '备案信息');
+INSERT INTO `blue_config` VALUES ('tel', '', '1', '官方电话');
+INSERT INTO `blue_config` VALUES ('email', '111111111', '1', '官方邮箱');
+INSERT INTO `blue_config` VALUES ('business_email', '2018 University of Washington | Seattle, WA', '1', '企业邮箱');
+INSERT INTO `blue_config` VALUES ('web_name', '中国网络创业共享网', '1', '网站名称');
+INSERT INTO `blue_config` VALUES ('web_address', '', '1', '网站地址');
+INSERT INTO `blue_config` VALUES ('qq', '', '1', 'QQ');
 
 -- ----------------------------
--- Table structure for `blue_deposit_auth`
+-- Table structure for `blue_jober`
 -- ----------------------------
-DROP TABLE IF EXISTS `blue_deposit_auth`;
-CREATE TABLE `blue_deposit_auth` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `member_id` int(11) DEFAULT NULL COMMENT '用户id',
-  `img` varchar(400) DEFAULT NULL,
-  `pay_money` decimal(8,2) DEFAULT NULL COMMENT '金额',
-  `status` tinyint(4) DEFAULT NULL COMMENT '审核状态 0：未审核 1：审核成功 2：审核中 3：审核失败',
-  `add_time` int(11) DEFAULT NULL,
-  `op_man` int(10) DEFAULT NULL COMMENT '操作者',
-  `op_time` int(10) DEFAULT NULL COMMENT '操作时间',
-  `pay_type` tinyint(4) DEFAULT '1' COMMENT '支付类型 1：支付宝支付 2：微信支付',
+DROP TABLE IF EXISTS `blue_jober`;
+CREATE TABLE `blue_jober` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `type_id` int(10) unsigned NOT NULL COMMENT '工作类型',
+  `name` varchar(128) DEFAULT '' COMMENT ' 姓名',
+  `head_img` varchar(200) DEFAULT '' COMMENT '头像',
+  `life_img` varchar(200) DEFAULT '' COMMENT '生活照片',
+  `age` varchar(20) DEFAULT '' COMMENT '年龄',
+  `lang` varchar(20) DEFAULT '' COMMENT '语言',
+  `edu` varchar(20) DEFAULT '' COMMENT '教育',
+  `area` varchar(100) DEFAULT '' COMMENT '区域',
+  `place` varchar(50) DEFAULT '' COMMENT '籍贯',
+  `zodiac` varchar(50) DEFAULT '' COMMENT '属相',
+  `work_years` varchar(50) DEFAULT '' COMMENT '工作年限',
+  `certificate` varchar(1024) DEFAULT '' COMMENT '资质证书',
+  `work_exp` varchar(2048) DEFAULT '' COMMENT '工作经历',
+  `work_skill` varchar(1024) DEFAULT '' COMMENT '专业技巧',
+  `evaluate` varchar(1024) DEFAULT '' COMMENT '自我评价',
+  `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
+  `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='审核';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of blue_deposit_auth
--- ----------------------------
-INSERT INTO `blue_deposit_auth` VALUES ('1', '1', '/Uploads/Public/Uploads/2019-03-16/5c8cb67ab2d8e.jpg', '500.00', '1', '1552725248', '1', '1552725986', null);
-INSERT INTO `blue_deposit_auth` VALUES ('2', '2', '/Uploads/Public/Uploads/2019-03-17/5c8de7c9e5043.jpg', '500.00', '2', '1552803795', null, null, null);
-INSERT INTO `blue_deposit_auth` VALUES ('3', '3', '/Uploads/Public/Uploads/2019-04-08/5caad30a13bc8.jpg', '500.00', '1', '1554699020', null, null, '1');
-INSERT INTO `blue_deposit_auth` VALUES ('4', '5', '/Uploads/Public/Uploads/2019-05-13/5cd961ab45206.jpg', '200.00', '1', '1557750189', null, null, '1');
-
--- ----------------------------
--- Table structure for `blue_finance`
--- ----------------------------
-DROP TABLE IF EXISTS `blue_finance`;
-CREATE TABLE `blue_finance` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '财务日志表',
-  `member_id` int(11) NOT NULL COMMENT '推广人id',
-  `sub_member_id` int(11) DEFAULT NULL COMMENT '下级id',
-  `type` tinyint(4) NOT NULL COMMENT '类型',
-  `content` text NOT NULL COMMENT '内容',
-  `money_type` tinyint(4) NOT NULL COMMENT '收入=1/支出=2',
-  `money` decimal(20,2) NOT NULL COMMENT '价格',
-  `add_time` int(10) NOT NULL COMMENT '添加时间',
-  PRIMARY KEY (`id`),
-  KEY `种类` (`type`)
-) ENGINE=MyISAM AUTO_INCREMENT=30040 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of blue_finance
+-- Records of blue_jober
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `blue_finance_type`
+-- Table structure for `blue_job_type`
 -- ----------------------------
-DROP TABLE IF EXISTS `blue_finance_type`;
-CREATE TABLE `blue_finance_type` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `name` varchar(32) NOT NULL,
-  `status` tinyint(2) NOT NULL,
+DROP TABLE IF EXISTS `blue_job_type`;
+CREATE TABLE `blue_job_type` (
+  `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `type_name` varchar(128) DEFAULT '' COMMENT ' --默认标题名称',
+  `status` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '--状态1：开启 0：关闭',
+  `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
+  `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
+  PRIMARY KEY (`type_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of blue_job_type
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `blue_join_train`
+-- ----------------------------
+DROP TABLE IF EXISTS `blue_join_train`;
+CREATE TABLE `blue_join_train` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `name` varchar(128) DEFAULT '' COMMENT '姓名',
+  `phone` varchar(50) DEFAULT '' COMMENT '手机号码',
+  `courses` varchar(1024) DEFAULT '' COMMENT '意向课程',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--提交时间--',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of blue_finance_type
+-- Records of blue_join_train
 -- ----------------------------
-INSERT INTO `blue_finance_type` VALUES ('1', '推广奖励', '1');
 
 -- ----------------------------
 -- Table structure for `blue_member`
@@ -3730,47 +3704,6 @@ INSERT INTO `blue_member` VALUES ('1', '15179811531', 'e10adc3949ba59abbe56e057f
 INSERT INTO `blue_member` VALUES ('2', '雪中行者', 'e10adc3949ba59abbe56e057f20f883e', '1', null, null, '15179811532', '127.0.0.1', '1552803578', '127.0.0.1', '1557282604', '0.00000000', '0.00000000', '0', '1');
 INSERT INTO `blue_member` VALUES ('3', 'hmlwan', 'e10adc3949ba59abbe56e057f20f883e', '', null, null, '15179811533', '127.0.0.1', '1553675597', '127.0.0.1', '1558086265', '0.00000000', '0.00000000', '0', '1');
 INSERT INTO `blue_member` VALUES ('5', 'hmlwan3', 'e10adc3949ba59abbe56e057f20f883e', '1', null, null, '15179811534', '127.0.0.1', '1557750110', '127.0.0.1', '1557803863', '100.00000000', '0.00000000', '0', '1');
-
--- ----------------------------
--- Table structure for `blue_member_bank`
--- ----------------------------
-DROP TABLE IF EXISTS `blue_member_bank`;
-CREATE TABLE `blue_member_bank` (
-  `id` int(32) NOT NULL AUTO_INCREMENT,
-  `bankname` varchar(32) NOT NULL COMMENT '银行',
-  `member_id` int(11) NOT NULL,
-  `cardname` varchar(32) NOT NULL COMMENT '用户名',
-  `address` varchar(128) NOT NULL COMMENT '开户地',
-  `cardnum` varchar(128) NOT NULL COMMENT '卡号',
-  `bname` varchar(32) NOT NULL COMMENT '标签',
-  `status` tinyint(2) NOT NULL COMMENT '状态',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=633 DEFAULT CHARSET=utf8 COMMENT='用户银行卡信息';
-
--- ----------------------------
--- Records of blue_member_bank
--- ----------------------------
-INSERT INTO `blue_member_bank` VALUES ('630', '中国建设银行', '1', '张三', '', '6256256255628526', '', '1');
-INSERT INTO `blue_member_bank` VALUES ('631', '建设银行', '1', '李四', '', '6256256255628526', '', '1');
-INSERT INTO `blue_member_bank` VALUES ('632', '工商银行', '1', '王五', '', '6256256255628526', '', '1');
-
--- ----------------------------
--- Table structure for `blue_member_fg`
--- ----------------------------
-DROP TABLE IF EXISTS `blue_member_fg`;
-CREATE TABLE `blue_member_fg` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `member_id` int(11) DEFAULT NULL,
-  `task_id` int(11) DEFAULT NULL COMMENT '任务id',
-  `type` tinyint(4) DEFAULT NULL COMMENT '类型 1：执行者 2：付款者',
-  `fg_num` int(11) DEFAULT '0' COMMENT '复购次数',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of blue_member_fg
--- ----------------------------
-INSERT INTO `blue_member_fg` VALUES ('3', '5', '5', '2', '0');
 
 -- ----------------------------
 -- Table structure for `blue_member_info`
@@ -3809,29 +3742,6 @@ INSERT INTO `blue_member_info` VALUES ('2', '3', '20.00', '3', '0.00', '1', '0.0
 INSERT INTO `blue_member_info` VALUES ('4', '5', '50.00', '3', '200.00', '1', '0.00', '0', '/Uploads/Public/Uploads/2019-05-13/5cd96180d7cbe.jpg', '/Uploads/Public/Uploads/2019-05-13/5cd96199577ce.jpg', '/Uploads/Public/Uploads/2019-05-13/5cd96190a5a52.jpg', '3', '3', '0', '0', '0', null, '1557803864', '0', '0', '0.00');
 
 -- ----------------------------
--- Table structure for `blue_member_trade_record`
--- ----------------------------
-DROP TABLE IF EXISTS `blue_member_trade_record`;
-CREATE TABLE `blue_member_trade_record` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `member_id` int(10) DEFAULT NULL COMMENT '用户id',
-  `qd_record_id` int(10) DEFAULT NULL,
-  `type` tinyint(4) DEFAULT NULL COMMENT '类型 1:执行者 2：收款者',
-  `money` decimal(20,2) DEFAULT '0.00' COMMENT '金额',
-  `commision` decimal(20,2) DEFAULT '0.00' COMMENT '佣金',
-  `add_time` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='用户资金交易记录表';
-
--- ----------------------------
--- Records of blue_member_trade_record
--- ----------------------------
-INSERT INTO `blue_member_trade_record` VALUES ('5', '1', '6', '1', '500.00', '0.00', '1557646195');
-INSERT INTO `blue_member_trade_record` VALUES ('6', '3', '6', '2', '500.00', '50.00', '1557646195');
-INSERT INTO `blue_member_trade_record` VALUES ('7', '1', '7', '1', '500.00', '0.00', '1557809490');
-INSERT INTO `blue_member_trade_record` VALUES ('8', '5', '7', '2', '500.00', '50.00', '1557809490');
-
--- ----------------------------
 -- Table structure for `blue_nav`
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_nav`;
@@ -3842,20 +3752,19 @@ CREATE TABLE `blue_nav` (
   `nav_url` varchar(64) NOT NULL COMMENT 'url路径',
   `cat_id` varchar(32) NOT NULL COMMENT '类别',
   PRIMARY KEY (`nav_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=89 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_nav
 -- ----------------------------
-INSERT INTO `blue_nav` VALUES ('1', '系统设置', '&#xe642;', '/Config/index', 'sys');
+INSERT INTO `blue_nav` VALUES ('1', '系统配置', '&#xe642;', '/Config/index', 'sys');
 INSERT INTO `blue_nav` VALUES ('4', '官方公告管理', '&#xe6f7;', '/Art/index/article_category_id/1', 'article');
 INSERT INTO `blue_nav` VALUES ('7', '会员列表', '&#x3434;', '/Member/index', 'user');
 INSERT INTO `blue_nav` VALUES ('8', '添加会员', '&#xe62f;', '/Member/addMember', 'user');
 INSERT INTO `blue_nav` VALUES ('15', '提现审核', '&#xe6a7;', '/Withdraw/index', 'withdraw');
 INSERT INTO `blue_nav` VALUES ('12', '提现记录', '&#xe659;', '/Withdraw/record', 'withdraw');
 INSERT INTO `blue_nav` VALUES ('16', '收款记录', '&#xe608;', '/Trade/sk_record', 'trade1');
-INSERT INTO `blue_nav` VALUES ('28', '财务设置', '&#xe61d;', '/Config/finance', 'sys1');
-INSERT INTO `blue_nav` VALUES ('30', '短信设置', '&#xe6ef;', '/Config/shortMessage', 'sys');
+INSERT INTO `blue_nav` VALUES ('23', '菜单配置', '&#xe608;', '/Menu/index', 'sys');
 INSERT INTO `blue_nav` VALUES ('18', '全站统计信息', '&#xe73e;', '/Index/infoStatistics', 'common');
 INSERT INTO `blue_nav` VALUES ('41', '管理员管理', '&#xe64d;', '/Manage/index', 'admin');
 INSERT INTO `blue_nav` VALUES ('17', '抢单记录', '&#xe608;', '/Trade/qd_record', 'trade');
@@ -3869,97 +3778,122 @@ INSERT INTO `blue_nav` VALUES ('58', '数据统计', '&#xe6f7;', '/Tongji/shuju'
 INSERT INTO `blue_nav` VALUES ('59', '详细统计', '&#xe6f7;', '/Tongji/xiangxi', 'tongji');
 INSERT INTO `blue_nav` VALUES ('60', '余额排名', '&#xe6f7;', '/Tongji/yue', 'tongji');
 INSERT INTO `blue_nav` VALUES ('69', '任务列表', '&#xe6f7;', '/PubTask/index', 'pubtask');
-INSERT INTO `blue_nav` VALUES ('83', '转账记录', '&#xe6f7;', '/Transfer/record', 'transfer');
 INSERT INTO `blue_nav` VALUES ('19', '交易/佣金记录', '&#xe608;', '/Trade/jy_record', 'trade');
 INSERT INTO `blue_nav` VALUES ('20', '推广奖励记录', '&#xe608;', '/Trade/promote_reward_record', 'trade');
 INSERT INTO `blue_nav` VALUES ('21', '复购记录', '&#xe608;', '/Trade/re_buy_record', 'trade');
 INSERT INTO `blue_nav` VALUES ('22', '佣金记录', '&#xe608;', '/Trade/commision_record', 'trade');
 
 -- ----------------------------
+-- Table structure for `blue_order_ayi`
+-- ----------------------------
+DROP TABLE IF EXISTS `blue_order_ayi`;
+CREATE TABLE `blue_order_ayi` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `name` varchar(128) DEFAULT '' COMMENT '姓名',
+  `phone` varchar(50) DEFAULT '' COMMENT '手机号码',
+  `jober_id` int(10) unsigned NOT NULL COMMENT '预约阿姨id',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--提交时间--',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of blue_order_ayi
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `blue_pub_task`
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_pub_task`;
 CREATE TABLE `blue_pub_task` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) DEFAULT NULL COMMENT '标题',
-  `logo_img` varchar(200) DEFAULT NULL COMMENT 'logo图片',
-  `introduce` varchar(400) DEFAULT NULL COMMENT '简介',
-  `reward` decimal(20,2) DEFAULT '0.00' COMMENT '奖金',
-  `status` tinyint(4) DEFAULT '1' COMMENT '状态 1：开启 0：关闭',
-  `sort` int(11) DEFAULT NULL COMMENT '排序',
-  `create_time` int(10) DEFAULT NULL COMMENT '创建时间',
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `type_id` int(10) unsigned NOT NULL COMMENT '工作类型',
+  `city` varchar(50) DEFAULT '' COMMENT '城市',
+  `content` varchar(200) DEFAULT '' COMMENT '工作内容',
+  `ask_skill` varchar(200) DEFAULT '' COMMENT '阿姨要求',
+  `salary` varchar(200) DEFAULT '' COMMENT '薪资待遇',
+  `contact_person` varchar(100) DEFAULT '' COMMENT '联系人',
+  `address` varchar(200) DEFAULT '' COMMENT '总部地址',
+  `bus_route` varchar(200) DEFAULT '' COMMENT '乘车路线',
+  `contact_phone` varchar(50) DEFAULT '' COMMENT '联系电话',
+  `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '状态 1：开启 0 关闭',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '发布时间',
+  `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_pub_task
 -- ----------------------------
-INSERT INTO `blue_pub_task` VALUES ('5', '测试2', '/Uploads/Public/Uploads/2018-11-07/5be2854d6199f.png', ' 百度资料 贷款                                  ', '500.00', '1', '1', '1552712592');
 
 -- ----------------------------
--- Table structure for `blue_qd_record`
+-- Table structure for `blue_special_service`
 -- ----------------------------
-DROP TABLE IF EXISTS `blue_qd_record`;
-CREATE TABLE `blue_qd_record` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `fk_id` int(11) DEFAULT NULL COMMENT '执行者id',
-  `sk_id` int(11) DEFAULT NULL COMMENT '收款者',
-  `task_id` int(11) DEFAULT NULL COMMENT '任务id 0 为系统匹配',
-  `reward` decimal(20,2) DEFAULT '0.00' COMMENT '酬金',
-  `fg_num` tinyint(20) DEFAULT '0' COMMENT '付款复购倍数',
-  `status` tinyint(4) DEFAULT NULL COMMENT '状态 0：匹配中 1：付款成功 2：执行中 3：付款失败',
-  `create_time` int(10) DEFAULT NULL,
-  `img` varchar(128) DEFAULT NULL COMMENT '上传凭证',
-  `sk_fg_num` tinyint(20) DEFAULT '0' COMMENT '收款复购倍数',
-  `pay_type` tinyint(4) DEFAULT '1' COMMENT '1:支付宝 2：微信',
+DROP TABLE IF EXISTS `blue_special_service`;
+CREATE TABLE `blue_special_service` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `name` varchar(128) DEFAULT '' COMMENT '名称',
+  `img` varchar(2048) NOT NULL DEFAULT '' COMMENT '图片',
+  `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
+  `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='抢单记录变';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of blue_qd_record
+-- Records of blue_special_service
 -- ----------------------------
-INSERT INTO `blue_qd_record` VALUES ('1', '1', '2', '0', '200.00', '0', '1', '1552803912', '/Uploads/Public/Uploads/2019-03-17/5c8de77359b22.jpg', null, null);
-INSERT INTO `blue_qd_record` VALUES ('6', '1', '3', '5', '500.00', '0', '1', '1557639696', '/Uploads/Public/Uploads/2019-05-12/5cd7b28269af5.jpg', '0', '1');
-INSERT INTO `blue_qd_record` VALUES ('7', '1', '5', '5', '500.00', '0', '1', '1557750812', '/Uploads/Public/Uploads/2019-05-13/5cd964c7e3fa7.jpg', '0', '1');
-INSERT INTO `blue_qd_record` VALUES ('8', '5', '3', '0', '200.00', '0', '0', '1557750659', null, '0', '1');
 
 -- ----------------------------
--- Table structure for `blue_transfer_record`
+-- Table structure for `blue_sub_company`
 -- ----------------------------
-DROP TABLE IF EXISTS `blue_transfer_record`;
-CREATE TABLE `blue_transfer_record` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `task_id` int(11) DEFAULT NULL COMMENT '任务id',
-  `payer_id` int(11) DEFAULT NULL COMMENT '付款人id',
-  `payee_id` int(11) DEFAULT NULL COMMENT '收款人id',
-  `total_amount` decimal(8,4) DEFAULT NULL COMMENT '全部费用',
-  `commision` decimal(8,2) DEFAULT NULL COMMENT '佣金',
-  `repay_nums` int(20) DEFAULT '0' COMMENT '复购次数',
-  `create_time` int(11) DEFAULT NULL COMMENT '创建时间',
+DROP TABLE IF EXISTS `blue_sub_company`;
+CREATE TABLE `blue_sub_company` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `name` varchar(128) DEFAULT '' COMMENT '名称',
+  `address` varchar(200) DEFAULT '' COMMENT '地址',
+  `contact` varchar(50) NOT NULL DEFAULT '联系人',
+  `phone` varchar(50) NOT NULL DEFAULT '' COMMENT '联系电话',
+  `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
+  `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of blue_transfer_record
+-- Records of blue_sub_company
 -- ----------------------------
-INSERT INTO `blue_transfer_record` VALUES ('1', '4', '10355', '10378', '100.0000', '2.00', '0', '1547398923');
-INSERT INTO `blue_transfer_record` VALUES ('2', '5', '10377', '10355', '100.0000', '2.00', '0', '1547398923');
 
 -- ----------------------------
--- Table structure for `blue_withdraw`
+-- Table structure for `blue_teacher_power`
 -- ----------------------------
-DROP TABLE IF EXISTS `blue_withdraw`;
-CREATE TABLE `blue_withdraw` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `member_id` int(11) DEFAULT NULL COMMENT '用户id',
-  `tx_type` tinyint(4) DEFAULT NULL COMMENT '提现类型 1：押金 2：佣金',
-  `tx_fs` tinyint(4) DEFAULT NULL COMMENT '提现方式 1:支付宝2：微信',
-  `money` decimal(20,2) DEFAULT '0.00' COMMENT '提现金额',
-  `status` tinyint(4) DEFAULT '0' COMMENT '提现状态 0：未审核 1：审核成功 2：审核中 3：审核失败',
-  `add_time` int(11) DEFAULT NULL,
+DROP TABLE IF EXISTS `blue_teacher_power`;
+CREATE TABLE `blue_teacher_power` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `name` varchar(128) DEFAULT '' COMMENT '姓名',
+  `img` varchar(200) DEFAULT '' COMMENT '头像',
+  `position` varchar(100) DEFAULT '' COMMENT '职位',
+  `introduce` varchar(1024) DEFAULT '' COMMENT '介绍',
+  `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
+  `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='提现表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of blue_withdraw
+-- Records of blue_teacher_power
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `blue_train_course`
+-- ----------------------------
+DROP TABLE IF EXISTS `blue_train_course`;
+CREATE TABLE `blue_train_course` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `course_name` varchar(128) DEFAULT '' COMMENT '课程姓名',
+  `course_img` varchar(200) DEFAULT '' COMMENT '课程图片',
+  `introduce` varchar(1024) DEFAULT '' COMMENT '介绍',
+  `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
+  `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of blue_train_course
 -- ----------------------------

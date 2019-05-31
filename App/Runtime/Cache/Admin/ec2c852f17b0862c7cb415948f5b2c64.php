@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>    <!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="/Public/Admin/iconfont/iconfont.css"/>
     <script type="text/javascript" src="/Public/Admin/js/libs/modernizr.min.js"></script>
 	<script type="text/javascript" src="/Public/Admin/js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="/Public/plugin/Js/layer/layer.min.js"></script>
-    <script type="text/javascript" src="/Public/plugin/Js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="/Public/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/Public/js/laydate/laydate.js"></script>
 <style>
 .iconfont{ padding-right:5px;}
 .fsize{ font-size:15px;}
@@ -128,59 +128,85 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
 </script>
 
-    <!--/sidebar-->
-    <div class="main-wrap">
+<!--/sidebar-->
 
-        <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Index/index');?>">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">管理员管理</span></div>
-        </div>
-        <div class="search-wrap">
-            <div class="search-content">
-                <form action="<?php echo U('Manage/index');?>" method="post">
-                    <table class="search-tab">
-                        <tr>
-                            <th width="70">管理员:</th>
-                            <td><input class="common-text" placeholder="管理员" name="username" type="text"></td>
-                            <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
-                        </tr>
-                    </table>
-                </form>
-				
-            </div>
-        </div>
-        <div class="result-wrap">
+<div class="main-wrap">
 
-            <div class="result-title">
-                <div class="result-list">
-                    <a href="<?php echo U('Manage/addAdmin');?>"><i class="icon-font"></i>新增管理员</a>
-                </div>
-            </div>
-            <div class="result-content">
-                <table class="result-tab" width="100%">
-                    <tr>
-                        <th>ID</th>
-                        <th>管理员名称</th>
-                        <th>状态</th>
-                        <th>操作</th>
-                    </tr>
-                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                            <td><?php echo ($vo['admin_id']); ?></td>
-                            <td><?php echo ($vo['username']); if(($vo["nav"]) == ""): ?>&nbsp;（此账号尚未分配权限）<?php endif; ?></td>
-                            <td><?php if(($vo["status"]) == "0"): ?>可用<?php else: ?>停用<?php endif; ?></td>
-                            <td>
-                                <a class="link-update" href="<?php echo U('Manage/addAdmin',array('admin_id'=>$vo['admin_id']));?>">修改信息</a>
-                                <a class="link-update" href="<?php echo U('Manage/showNav',array('admin_id'=>$vo['admin_id']));?>">修改权限</a>
-                                <?php if(($vo["admin_id"]) == "1"): else: ?><a class="link-del" href="<?php echo U('Manage/delMember',array('admin_id'=>$vo['admin_id']));?>" onclick="return confirm('确认删除吗？')">删除</a><?php endif; ?>
-                            </td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
-                </table>
-                <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
-            </div>
-
+    <div class="crumb-wrap">
+        <div class="crumb-list"><i class="icon-font"></i>
+            <a href="<?php echo U('Index/index');?>">系统管理</a>
+            <span class="crumb-step">&gt;</span>
+            <span class="crumb-name">系统配置</span>
         </div>
     </div>
-    <!--/main-->
+    <div class="search-wrap">
+
+    </div>
+    <div class="result-wrap">
+
+        <div class="result-title">
+            <div class="result-list">
+                <a href="<?php echo U('Config/add');?>#6#0"><i class="icon-font"></i>新增发布任务</a>
+            </div>
+        </div>
+        <div class="result-content">
+            <table class="result-tab" width="100%">
+                <tr>
+
+                    <th>ID</th>
+                    <th>发布任务标题</th>
+                    <th>简介</th>
+                    <th>任务logo</th>
+                    <th>酬金</th>
+                    <th>排序</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td><?php echo ($vo['id']); ?></td>
+                        <td><?php echo ($vo['title']); ?></td>
+                        <td><?php echo ($vo['introduce']); ?></td>
+                        <td>
+                            <img src="<?php echo ($vo['logo_img']); ?>" style="height: 80px;width: 80px" alt="">
+                        </td>
+                        <td><?php echo ($vo['reward']); ?></td>
+                        <td><?php echo ($vo['sort']); ?></td>
+                        <td><?php if($vo['status'] == 1): ?>开启<?php endif; ?>
+                            <?php if($vo['status'] == 0): ?>关闭<?php endif; ?>
+                        </td>
+                        <td>
+                            <a class="link-update" href="<?php echo U('PubTask/save#6#0',array('id'=>$vo['id']));?>#13#0">修改|</a>
+                            <a href="javascript:void(0)" class="link-del" onclick="cexiao(<?php echo ($vo["id"]); ?>)">删除</a>
+                        </td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
+            </table>
+            <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
+        </div>
+
+    </div>
+</div>
+<!--/main-->
 </div>
 </body>
 </html>
+<script>
+    function cexiao(_this){
+        layer.confirm('确定删除吗？', {
+            btn: ['确定','取消'], //按钮
+            title: '撤销删除'
+        }, function(){
+            $.post('<?php echo U('PubTask/del');?>',{id:_this},function(data){
+                if(data['status'] == 1){
+                    layer.msg(data['info']);
+                    setTimeout(function(){location.reload();},1000);
+                }else{
+                    layer.msg(data['info']);
+                }
+            })
+        }, function(){
+            layer.msg('已取消');
+        });
+
+    }
+</script>

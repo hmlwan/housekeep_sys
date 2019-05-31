@@ -1,5 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -12,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="/Public/Admin/iconfont/iconfont.css"/>
     <script type="text/javascript" src="/Public/Admin/js/libs/modernizr.min.js"></script>
 	<script type="text/javascript" src="/Public/Admin/js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="/Public/js/layer/layer.js"></script>
-    <script type="text/javascript" src="/Public/js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="/Public/plugin/Js/layer/layer.min.js"></script>
+    <script type="text/javascript" src="/Public/plugin/Js/laydate/laydate.js"></script>
 <style>
 .iconfont{ padding-right:5px;}
 .fsize{ font-size:15px;}
@@ -129,143 +128,89 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
 </script>
 
-<!--/sidebar-->
+
 <div class="main-wrap">
-	<div class="crumb-wrap">
-		<div class="crumb-list">
-			<i class="icon-font"></i><a href="<?php echo U('Index/index');?>">首页</a><span
-				class="crumb-step">&gt;</span><span class="crumb-name">系统设置</span>
-		</div>
-	</div>
-	<div class="result-wrap">
-		<form action="<?php echo U('Config/updateCofig');?>" method="post" id="myform"
-			name="myform" enctype="multipart/form-data">
-			<div class="config-items">
-				<div class="config-title">
-					<h1>
-						<i class="icon-font">&#xe00a;</i>网站信息设置
-					</h1>
-				</div>
-				<div class="result-content">
-					<table width="100%" class="insert-tab">
-						<tbody>
-							<tr>
-								<th><i class="require-red">*</i>网站LOGO上传：</th>
-								<td><input type="file" name="logo" class="common-text"></td>
-								<th width="15%"><i class="require-red">*</i>网站LOGO：</th>
-								<td><img style="width: 300px;height: 150px;border-radius: 15px;border: 1px solid;" src="<?php echo ($config["logo"]); ?>"><input type="hidden"
-									name="logo" value="<?php echo ($config["logo"]); ?>" class="common-text"></td>
-							</tr>
-							<tr>
-								<th><i class="require-red">*</i>网站标题：</th>
-								<td><input type="text" id="" value="<?php echo ($config["title"]); ?>"
-										   size="85" name="title" class="common-text"></td>
-								<th><i class="require-red">*</i>网站网址：</th>
-								<td><input type="text" id="" value="<?php echo ($config["localhost"]); ?>"
-									size="85" name="localhost" class="common-text"></td>
-							</tr>
 
-							<tr>
-								<th><i class="require-red">*</i>网站名称：</th>
-								<td><input type="text" id="" value="<?php echo ($config["name"]); ?>"
-									size="85" name="name" class="common-text"></td>
-								<th><i class="require-red">*</i>网站关键字：</th>
-								<td><input type="text" id="" value="<?php echo ($config["keywords"]); ?>"
-										   size="85" name="keywords" class="common-text"></td>
-							</tr>
-							<tr>
-								<th><i class="require-red">*</i>网站描述：</th>
-								<td><input type="text" id="" value="<?php echo ($config["desc"]); ?>"
-										   size="85" name="desc" class="common-text"></td>
-								<th><i class="require-red">*</i>地址：</th>
-								<td><input type="text" id="" value="<?php echo ($config["address"]); ?>"
-										   size="85" name="address" class="common-text"></td>
-							</tr>
+    <div class="crumb-wrap">
+        <div class="crumb-list"><i class="icon-font"></i>
+            <a href="<?php echo U('Index/index');?>">系统管理</a>
+            <span class="crumb-step">&gt;</span>
+            <span class="crumb-name">系统设置</span>
+        </div>
+    </div>
+    <div class="search-wrap">
 
-							<tr>
-								<th><i class="require-red">*</i>版权信息：</th>
-								<td><input type="text" id="" value="<?php echo ($config["copyright"]); ?>"
-									size="85" name="copyright" class="common-text"></td>
-								<th><i class="require-red">*</i>备案信息：</th>
-								<td><input type="text" id="" value="<?php echo ($config["record"]); ?>"
-										   size="85" name="record" class="common-text"></td>
-							</tr>
-							<tr>
-								<th><i class="require-red">*</i>每天抢单次数：</th>
-								<td><input type="text" id="" value="<?php echo ($config["dayqdnum"]); ?>"
-										   size="85" name="dayqdnum" class="common-text"></td>
-								<th><i class="require-red">*</i>每天付款次数：</th>
-								<td><input type="text" id="" value="<?php echo ($config["dayfknum"]); ?>"
-										   size="85" name="dayfknum" class="common-text"></td>
-							</tr>
-							<tr>
-								<th><i class="require-red">*</i>押金：</th>
-								<td><input type="text" id="" value="<?php echo ($config["deposit"]); ?>"
-										   size="85" name="deposit" class="common-text"></td>
-								<th><i class="require-red">*</i>系统匹配打款金额：</th>
-								<td><input type="text" id="" value="<?php echo ($config["dk_money"]); ?>"
-										   size="30" name="dk_money" class="common-text">
+    </div>
+    <div class="result-wrap">
 
-									佣金率：<input type="text" id="" value="<?php echo ($config["commision_rate"]); ?>"
-										   size="30" name="commision_rate" class="common-text">
-								</td>
+        <div class="result-title">
+            <div class="result-list">
+                <a href="<?php echo U('Config/updateCofig');?>#0#0"><i class="icon-font"></i>新增配置</a>
+            </div>
+            <form action="<?php echo U('Config/index');?>" method="get">
+                <table class="search-tab">
+                    <tr>
+                        <td width="100">标题/字段名:</td>
+                        <td><input class="common-text" placeholder="标题/字段名" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
+                        <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="result-content">
+            <table class="result-tab" width="100%">
+                <tr>
+                    <th>标题</th>
+                    <th>字段名</th>
+                    <th>内容</th>
+                    <th>类型</th>
+                    <th>操作</th>
+                </tr>
+                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td style="width:10%"><?php echo ($vo['name']); ?></td>
+                        <td style="width:15%"><?php echo ($vo['key']); ?></td>
+                        <td style="width:60%">
+                            <?php if($vo['type'] == 2): ?><a href="<?php echo ($vo['value']); ?>" target="_blank"> <img src="<?php echo ($vo['value']); ?>" style="height: 80px;width: 80px" alt=""></a>
+                            <?php else: ?>
+                                <?php echo ($vo['value']); endif; ?>
+                        </td>
+                        <td style="width:10%">
+                            <?php if($vo['type'] == 2): ?>图片
+                            <?php else: ?>
+                                文本<?php endif; ?>
+                        </td>
+                        <td>
+                            <a class="link-update" href="<?php echo U('Config/updateCofig#0#0',array('sub_flag'=>1,'key'=>$vo['key']));?>#0#0">修改|</a>
+                            <a href="javascript:void(0)" class="link-del" onclick="cexiao('<?php echo ($vo["key"]); ?>')">删除</a>
+                        </td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
-							</tr>
-							<tr>
-								<th><i class="require-red">*</i>推广达到数量：</th>
-								<td><input type="text" id="" value="<?php echo ($config["promote_num"]); ?>"
-										   size="85" name="promote_num" class="common-text"></td>
-								<th><i class="require-red">*</i>平台合伙人：</th>
-								<td>直推：<input type="text" id="" value="<?php echo ($config["direct_push_num"]); ?>"
-										   size="15" name="direct_push_num" class="common-text">
-									团体：<input type="text" id="" value="<?php echo ($config["team_push_num"]); ?>"
-											  size="15" name="team_push_num" class="common-text">
-									额外百分比：<input type="text" id="" value="<?php echo ($config["increase_rate"]); ?>"
-											  size="15" name="increase_rate" class="common-text">
+            </table>
+            <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
+        </div>
 
-								</td>
-
-							</tr>
-							<tr>
-								<th><i class="require-red">*</i>恢复星星个数：</th>
-								<td><input type="text" id="" value="<?php echo ($config["refresh_stars"]); ?>"
-										   size="85" name="refresh_stars" class="common-text"></td>
-								<th><i class="require-red">*</i>提现金额：</th>
-								<td><input type="text" id="" value="<?php echo ($config["withdraw_amount"]); ?>"
-										   size="85" name="withdraw_amount" class="common-text"></td>
-
-							</tr>
-							<tr>
-								<th><i class="require-red">*</i>支付宝收款二维码上传：</th>
-								<td><input type="file" name="zfb_qrcode" class="common-text"></td>
-								<th width="15%"><i class="require-red">*</i>支付宝收款二维码：</th>
-								<td><img style="width: 300px;height: 150px;border-radius: 15px;border: 1px solid;" src="<?php echo ($config["zfb_qrcode"]); ?>"><input type="hidden"
-								 name="zfb_qrcode" value="<?php echo ($config["zfb_qrcode"]); ?>" class="common-text"></td>
-							</tr>
-							<tr>
-								<th><i class="require-red">*</i>微信收款二维码上传：</th>
-								<td><input type="file" name="wx_qrcode" class="common-text"></td>
-								<th width="15%"><i class="require-red">*</i>微信收款二维码：</th>
-								<td><img style="width: 300px;height: 150px;border-radius: 15px;border: 1px solid;" src="<?php echo ($config["wx_qrcode"]); ?>"><input type="hidden"
-																																			   name="wx_qrcode" value="<?php echo ($config["wx_qrcode"]); ?>" class="common-text"></td>
-							</tr>
-
-							<tr>
-								<th></th>
-								<td ><input type="submit" value="提交"
-									class="btn btn-primary btn6 mr10"> <input type="button"
-									value="返回" onclick="history.go(-1)" class="btn btn6"></td>
-							</tr>
-
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-		</form>
-	</div>
+    </div>
 </div>
 <!--/main-->
 </div>
 </body>
 </html>
+<script>
+    function cexiao(key){
+        layer.confirm('确定删除吗？', {
+            btn: ['确定','取消'], //按钮
+            title: '撤销删除'
+        }, function(){
+            $.post("<?php echo U('Config/del');?>",{key:key},function(data){
+                if(data['status'] == 1){
+                    layer.msg(data['info'],{icon:1});
+                    setTimeout(function(){location.reload();},1000);
+                }else{
+                    layer.msg(data['info']);
+                }
+            })
+        }, function(){
+            layer.msg('已取消');
+        });
+    }
+</script>
