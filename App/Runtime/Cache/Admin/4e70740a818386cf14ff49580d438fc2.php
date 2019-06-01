@@ -134,83 +134,143 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
 </script>
 
+<style>
+    .glyphicon-minus:before {
+        content: "\2212";
+    }
+    .glyphicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+    }
 
+</style>
+<!--/sidebar-->
 <div class="main-wrap">
-
     <div class="crumb-wrap">
-        <div class="crumb-list"><i class="icon-font"></i>
-            <a href="<?php echo U('Index/index');?>">系统管理</a>
-            <span class="crumb-step">&gt;</span>
-            <span class="crumb-name">菜单配置</span>
-        </div>
-    </div>
-    <div class="search-wrap">
-
+        <div class="crumb-list"><i class="icon-font">
+        </i><a href="<?php echo U('Index/index');?>">首页</a>
+            <span class="crumb-step">&gt;</span><span class="crumb-name">阿姨管理</span></div>
     </div>
     <div class="result-wrap">
-
-        <div class="result-title">
-            <div class="result-list">
-                <a href="<?php echo U('Menu/edit');?>#1#0"><i class="icon-font"></i>新增菜单</a>
+        <form action="<?php echo U('Job/ayi_add');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>">
+            <div class="config-items">
+                <div class="config-title">
+                    <h1><i class="icon-font">&#xe00a;</i>阿姨添加</h1>
+                </div>
+                <div class="result-content">
+                    <table width="100%" class="insert-tab">
+                        <tbody>
+                            <tr>
+                                <th><i class="require-red">*</i>工作类型：</th>
+                                <td>
+                                    <select name="type_id" id="type_id"  class="common-text">
+                                        <?php if(is_array($job_type)): $i = 0; $__LIST__ = $job_type;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["type_id"]); ?>" <?php if($info['type_id'] == $vo['type_id']): ?>selected<?php endif; ?> ><?php echo ($vo["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>姓名：</th>
+                                <td><input id="name" name="name" value="<?php echo ($info["name"]); ?>" type="text"  class="common-text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>头像：</th>
+                                <td><input id="head_img" name="head_img" value="" type="file"  class="common-text">
+                                    <img src="<?php echo ($info["head_img"]); ?>" style="height: 100px;width: 100px" alt="">
+                                </td>
+                                <input type="hidden" name="head_img1" value="<?php echo ($info["head_img"]); ?>">
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>生活照片：</th>
+                                <td><input id="life_img" name="life_img" value="" type="file"  class="common-text">
+                                    <img src="<?php echo ($info["life_img"]); ?>" style="height: 100px;width: 100px" alt="">
+                                </td>
+                                <input type="hidden" name="life_img1" value="<?php echo ($info["life_img"]); ?>">
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>年龄：</th>
+                                <td><input id="age" name="age" value="<?php echo ($info["age"]); ?>" type="text"  class="common-text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>语言：</th>
+                                <td><input id="lang" name="lang" value="<?php echo ($info["lang"]); ?>" type="text"  class="common-text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>工作年限：</th>
+                                <td><input id="work_years" name="work_years" value="<?php echo ($info["work_years"]); ?>" type="text"  class="common-text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>学历：</th>
+                                <td><input id="edu" name="edu" value="<?php echo ($info["edu"]); ?>" type="text"  class="common-text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>区域：</th>
+                                <td><input id="area" name="area" value="<?php echo ($info["area"]); ?>" type="text"  class="common-text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>籍贯：</th>
+                                <td><input id="place" name="place" value="<?php echo ($info["place"]); ?>" type="text"  class="common-text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>属相：</th>
+                                <td><input id="zodiac" name="zodiac" value="<?php echo ($info["zodiac"]); ?>" type="text"  class="common-text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>资质证书：</th>
+                                <td>
+                                    <textarea name="certificate" id="certificate" style="height:auto" class="common-text" cols="50" rows="3"><?php echo ($info["certificate"]); ?></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>工作经历：</th>
+                                <td>
+                                    <textarea name="work_exp" id="work_exp" class="common-text" style="height:auto" cols="50" rows="3"><?php echo ($info["work_exp"]); ?></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>专业技巧：</th>
+                                <td>
+                                    <textarea name="work_skill" id="work_skill" class="common-text" style="height:auto" cols="50" rows="3"><?php echo ($info["work_skill"]); ?></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>自我评价：</th>
+                                <td>
+                                    <textarea name="evaluate" id="evaluate" class="common-text" style="height:auto" cols="50" rows="3"><?php echo ($info["evaluate"]); ?></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red"></i>状态：</th>
+                                <td>
+                                    <select name="status" id="status"  class="common-text">
+                                        <option value="1" <?php if($info['status'] == '1'): ?>selected<?php endif; ?> >开启</option>
+                                        <option value="0" <?php if($info['status'] == '0'): ?>selected<?php endif; ?>>关闭</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input type="button" onclick="subform()" value="提交" class="btn btn-primary btn6 mr10">
+                                    <a href="<?php echo U('Job/index');?>"><input type="button" value="返回"  class="btn btn6"></a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </div>
             </div>
-            <form action="<?php echo U('Menu/index');?>" method="get">
-                <table class="search-tab">
-                    <tr>
-                        <td width="100">菜单名称/类别:</td>
-                        <td><input class="common-text" placeholder="菜单名称/类别" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
-                        <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div class="result-content">
-            <table class="result-tab" width="100%">
-                <tr>
-                    <th>菜单ID</th>
-                    <th>菜单名称</th>
-                    <th>图标icon</th>
-                    <th>nav_url</th>
-                    <th>类别</th>
-                    <th>操作</th>
-                </tr>
-                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($vo['nav_id']); ?></td>
-                        <td><?php echo ($vo['nav_name']); ?></td>
-                        <td><i class="iconfont"><?php echo ($vo["nav_e"]); ?></i></td>
-                        <td><?php echo ($vo['nav_url']); ?></td>
-                        <td><?php echo ($vo['cat_id']); ?></td>
-                        <td>
-                            <a class="link-update" href="<?php echo U('Menu/edit#1#0',array('nav_id'=>$vo['nav_id']));?>#0#0">修改|</a>
-                            <a href="javascript:void(0)" class="link-del" onclick="cexiao('<?php echo ($vo["nav_id"]); ?>')">删除</a>
-                        </td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
-            </table>
-            <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
-        </div>
-
+        </form>
     </div>
 </div>
-<!--/main-->
+<script>
+    function subform(){
+        $('#myform').submit();
+    }
+</script>
 </div>
 </body>
 </html>
-<script>
-    function cexiao(nav_id){
-        layer.confirm('确定删除吗？', {
-            btn: ['确定','取消'], //按钮
-            title: '撤销删除'
-        }, function(){
-            $.post("<?php echo U('Menu/del');?>",{nav_id:nav_id},function(data){
-                if(data['status'] == 1){
-                    layer.msg(data['info'],{icon:1});
-                    setTimeout(function(){location.reload();},1000);
-                }else{
-                    layer.msg(data['info']);
-                }
-            })
-        }, function(){
-            layer.msg('已取消');
-        });
-    }
-</script>

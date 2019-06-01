@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-05-31 22:23:43
+Date: 2019-06-01 20:32:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3630,14 +3630,17 @@ CREATE TABLE `blue_jober` (
   `work_exp` varchar(2048) DEFAULT '' COMMENT '工作经历',
   `work_skill` varchar(1024) DEFAULT '' COMMENT '专业技巧',
   `evaluate` varchar(1024) DEFAULT '' COMMENT '自我评价',
+  `status` tinyint(4) DEFAULT '1' COMMENT '状态 1：开启0：关闭',
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_jober
 -- ----------------------------
+INSERT INTO `blue_jober` VALUES ('1', '2', '李阿姨', '/Uploads/Public/Uploads/2019-06-01/5cf2569dd3d8f.jpg', '/Uploads/Public/Uploads/2019-06-01/5cf2569ddb6ae.jpg', '31', '普通话/英语', '大专', '不限', '湖北', '虎', '3-5年', '身份证/健康证/母婴护理证/高级育婴证/小儿推拿证', '2017-2018 上海 上海家庭 3口之家 145平方 月嫂\r\n2018-2018 上海 上海家庭 4口之家 150平方 专带9个月宝宝\r\n                       ', '新生儿/抚触被动操/月子餐/开车/推拿按摩', '儿童营养学，预姨防宝宝的一些阿人特别老实，有亲和力，接受过专业的高级育婴师培训 ，有专业的育儿知识和技能，懂得常见疾病的发生及护理，懂得学照料喂养宝宝，懂些宝宝的急救常识 ，擅长和宝宝互动，开发宝宝智力，建立宝宝的良好习惯 ，培养宝宝的独立性，从而使宝宝各方面得到最好的发展，经验丰富，深受客户们的一致好评。', '1', '1559385990', 'admin');
+INSERT INTO `blue_jober` VALUES ('2', '6', '商阿姨', '/Uploads/Public/Uploads/2019-06-01/5cf25c4bf36f8.jpg', '/Uploads/Public/Uploads/2019-06-01/5cf25c4c0a86c.jpg', '48', '普通话/英语', '大专', '不限', '浙江', '牛', '3-5年', '身份证/健康证/母婴护理证/高级育婴证/早教证', '2015 上海 上海家庭 5口之家 1000平方 烧饭保洁\r\n2016 浙江 浙江家庭 4口之家 700平方 烧饭保洁\r\n2018 浙江 浙江家庭 3口之家 180平方 烧饭保洁', '做饭/保洁/熨烫/开车', '	阿姨为人随和，眼里有活，做事麻利，不斤斤计较，有亲和力，对待工作认真负责，肯吃苦耐劳，有爱心，会整理收纳规范整齐，勤勤恳恳，会做简单的家常菜，手艺好，口味好，懂些简单的营养搭配，能照料好雇主们的饮食起居，家里卫生也做的特别好，卫生打扫的很仔细，不敷衍了事，深受客户们的认可和信赖。', '1', '1559387212', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_job_type`
@@ -3650,11 +3653,16 @@ CREATE TABLE `blue_job_type` (
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_job_type
 -- ----------------------------
+INSERT INTO `blue_job_type` VALUES ('1', '育婴师', '1', '1559382393', 'admin');
+INSERT INTO `blue_job_type` VALUES ('2', '月嫂', '1', '1559382393', 'admin');
+INSERT INTO `blue_job_type` VALUES ('4', '家庭早教师', '1', '1559382393', 'admin');
+INSERT INTO `blue_job_type` VALUES ('5', '菲佣', '1', '1559382393', 'admin');
+INSERT INTO `blue_job_type` VALUES ('6', '保姆', '1', '1559382393', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_join_train`
@@ -3752,7 +3760,7 @@ CREATE TABLE `blue_nav` (
   `nav_url` varchar(64) NOT NULL COMMENT 'url路径',
   `cat_id` varchar(32) NOT NULL COMMENT '类别',
   PRIMARY KEY (`nav_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=89 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=90 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_nav
@@ -3761,27 +3769,25 @@ INSERT INTO `blue_nav` VALUES ('1', '系统配置', '&#xe642;', '/Config/index',
 INSERT INTO `blue_nav` VALUES ('4', '官方公告管理', '&#xe6f7;', '/Art/index/article_category_id/1', 'article');
 INSERT INTO `blue_nav` VALUES ('7', '会员列表', '&#x3434;', '/Member/index', 'user');
 INSERT INTO `blue_nav` VALUES ('8', '添加会员', '&#xe62f;', '/Member/addMember', 'user');
-INSERT INTO `blue_nav` VALUES ('15', '提现审核', '&#xe6a7;', '/Withdraw/index', 'withdraw');
-INSERT INTO `blue_nav` VALUES ('12', '提现记录', '&#xe659;', '/Withdraw/record', 'withdraw');
-INSERT INTO `blue_nav` VALUES ('16', '收款记录', '&#xe608;', '/Trade/sk_record', 'trade1');
+INSERT INTO `blue_nav` VALUES ('15', '工作类型管理', '&#xe6f7;', '/Job/index', 'job');
+INSERT INTO `blue_nav` VALUES ('12', '阿姨管理', '&#xe6f7;', '/Job/ayi', 'job');
+INSERT INTO `blue_nav` VALUES ('16', '师资管理', '&#xe6f7;', '/Train/teacher', 'train');
 INSERT INTO `blue_nav` VALUES ('23', '菜单配置', '&#xe608;', '/Menu/index', 'sys');
 INSERT INTO `blue_nav` VALUES ('18', '全站统计信息', '&#xe73e;', '/Index/infoStatistics', 'common');
 INSERT INTO `blue_nav` VALUES ('41', '管理员管理', '&#xe64d;', '/Manage/index', 'admin');
-INSERT INTO `blue_nav` VALUES ('17', '抢单记录', '&#xe608;', '/Trade/qd_record', 'trade');
+INSERT INTO `blue_nav` VALUES ('17', '课程管理', '&#xe608;', '/Train/course', 'train');
 INSERT INTO `blue_nav` VALUES ('50', '帮助中心', '&#xe6f7;', '/Art/helpindex/article_category_id/6', 'article');
 INSERT INTO `blue_nav` VALUES ('51', '快速链接', '&#xe6f7;', '/Art/index/article_category_id/7', 'article');
 INSERT INTO `blue_nav` VALUES ('52', '官方公告', '&#xe6f7;', '/Art/index/article_category_id/127', 'article');
 INSERT INTO `blue_nav` VALUES ('53', '行业资讯', '&#xe6f7;', '/Art/index/article_category_id/128', 'article');
 INSERT INTO `blue_nav` VALUES ('54', '项目介绍', '&#xe6f7;', '/Art/index/article_category_id/129', 'article');
-INSERT INTO `blue_nav` VALUES ('57', '推广排名', '&#xe6f7;', '/Tongji/tuiguang', 'tongji');
-INSERT INTO `blue_nav` VALUES ('58', '数据统计', '&#xe6f7;', '/Tongji/shuju', 'tongji');
-INSERT INTO `blue_nav` VALUES ('59', '详细统计', '&#xe6f7;', '/Tongji/xiangxi', 'tongji');
-INSERT INTO `blue_nav` VALUES ('60', '余额排名', '&#xe6f7;', '/Tongji/yue', 'tongji');
-INSERT INTO `blue_nav` VALUES ('69', '任务列表', '&#xe6f7;', '/PubTask/index', 'pubtask');
-INSERT INTO `blue_nav` VALUES ('19', '交易/佣金记录', '&#xe608;', '/Trade/jy_record', 'trade');
-INSERT INTO `blue_nav` VALUES ('20', '推广奖励记录', '&#xe608;', '/Trade/promote_reward_record', 'trade');
-INSERT INTO `blue_nav` VALUES ('21', '复购记录', '&#xe608;', '/Trade/re_buy_record', 'trade');
-INSERT INTO `blue_nav` VALUES ('22', '佣金记录', '&#xe608;', '/Trade/commision_record', 'trade');
+INSERT INTO `blue_nav` VALUES ('57', '预约阿姨', '&#xe6f7;', '/Record/order_ayi', 'record');
+INSERT INTO `blue_nav` VALUES ('58', '我要培训', '&#xe6f7;', '/Record/join_train', 'record');
+INSERT INTO `blue_nav` VALUES ('59', '特色服务内容', '&#xe6f7;', '/Company/special', 'company');
+INSERT INTO `blue_nav` VALUES ('60', '公司信息', '&#xe6f7;', '/Company/info', 'company');
+INSERT INTO `blue_nav` VALUES ('69', '分公司管理', '&#xe6f7;', '/Company/index', 'company');
+INSERT INTO `blue_nav` VALUES ('19', '高单管理', '&#xe608;', '/Job/pub_task', 'job');
+INSERT INTO `blue_nav` VALUES ('89', '我要应聘', '&#xe6f7;', '/Record/apply_task', 'record');
 
 -- ----------------------------
 -- Table structure for `blue_order_ayi`
@@ -3806,7 +3812,9 @@ CREATE TABLE `blue_order_ayi` (
 DROP TABLE IF EXISTS `blue_pub_task`;
 CREATE TABLE `blue_pub_task` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
-  `type_id` int(10) unsigned NOT NULL COMMENT '工作类型',
+  `title` varchar(100) NOT NULL COMMENT '工作类型',
+  `work_years` varchar(100) DEFAULT NULL COMMENT '工作年限',
+  `live_ask` varchar(100) DEFAULT NULL COMMENT '居住要求',
   `city` varchar(50) DEFAULT '' COMMENT '城市',
   `content` varchar(200) DEFAULT '' COMMENT '工作内容',
   `ask_skill` varchar(200) DEFAULT '' COMMENT '阿姨要求',
@@ -3819,11 +3827,12 @@ CREATE TABLE `blue_pub_task` (
   `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '发布时间',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_pub_task
 -- ----------------------------
+INSERT INTO `blue_pub_task` VALUES ('1', '烧饭保洁', '1-3年,3-5年', '住家', '上海', '烧饭保洁，搭手接送宝宝上下学', '勤快，可以跟老人相处', '6000-8000/26天（新手六千）', '佳禾婷婷老师', '上海市徐汇区徐虹北路3号2楼整层（老百姓大药房楼上）', '地铁3、4、9号线宜山路站下，4号线5号口出步行50米', '18516339538', '1', '0', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_special_service`

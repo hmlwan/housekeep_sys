@@ -134,83 +134,110 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
 </script>
 
+<style>
+    .glyphicon-minus:before {
+        content: "\2212";
+    }
+    .glyphicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+    }
 
+</style>
+<!--/sidebar-->
 <div class="main-wrap">
-
     <div class="crumb-wrap">
-        <div class="crumb-list"><i class="icon-font"></i>
-            <a href="<?php echo U('Index/index');?>">系统管理</a>
-            <span class="crumb-step">&gt;</span>
-            <span class="crumb-name">菜单配置</span>
-        </div>
-    </div>
-    <div class="search-wrap">
-
+        <div class="crumb-list"><i class="icon-font">
+        </i><a href="<?php echo U('Index/index');?>">首页</a>
+            <span class="crumb-step">&gt;</span><span class="crumb-name">高单管理</span></div>
     </div>
     <div class="result-wrap">
+        <form action="<?php echo U('Job/pub_task_add');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>">
+            <div class="config-items">
+                <div class="config-title">
+                    <h1><i class="icon-font">&#xe00a;</i>高单添加</h1>
+                </div>
+                <div class="result-content">
+                    <table width="100%" class="insert-tab">
+                        <tbody>
+                            <tr>
+                                <th><i class="require-red">*</i>标题：</th>
+                                <td><input id="title" name="title" value="<?php echo ($info["title"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>工作年限：</th>
+                                <td><input id="work_years" name="work_years" value="<?php echo ($info["work_years"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>居住要求：</th>
+                                <td><input id="live_ask" name="live_ask" value="<?php echo ($info["live_ask"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>工作地点（城市）：</th>
+                                <td><input id="city" name="city" value="<?php echo ($info["city"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
 
-        <div class="result-title">
-            <div class="result-list">
-                <a href="<?php echo U('Menu/edit');?>#1#0"><i class="icon-font"></i>新增菜单</a>
+                            <tr>
+                                <th><i class="require-red">*</i>工作内容：</th>
+                                <td><input id="content" name="content" value="<?php echo ($info["content"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>阿姨要求：</th>
+                                <td><input id="ask_skill" name="ask_skill" value="<?php echo ($info["ask_skill"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>薪资待遇：</th>
+                                <td><input id="salary" name="salary" value="<?php echo ($info["salary"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>联系人：</th>
+                                <td><input id="contact_person" name="contact_person" value="<?php echo ($info["contact_person"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>联系电话：</th>
+                                <td><input id="contact_phone" name="contact_phone" value="<?php echo ($info["contact_phone"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>总部地址：</th>
+                                <td><input id="address" name="address" value="<?php echo ($info["address"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>乘车路线：</th>
+                                <td><input id="bus_route" name="bus_route" value="<?php echo ($info["bus_route"]); ?>" type="text"  class="common-text btn50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red"></i>状态：</th>
+                                <td>
+                                    <select name="status" id="status"  class="common-text btn8">
+                                        <option value="1" <?php if($info['status'] == '1'): ?>selected<?php endif; ?> >开启</option>
+                                        <option value="0" <?php if($info['status'] == '0'): ?>selected<?php endif; ?>>关闭</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input type="button" onclick="subform()" value="提交" class="btn btn-primary btn6 mr10">
+                                    <a href="<?php echo U('Job/pub_task');?>"><input type="button" value="返回"  class="btn btn6"></a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </div>
             </div>
-            <form action="<?php echo U('Menu/index');?>" method="get">
-                <table class="search-tab">
-                    <tr>
-                        <td width="100">菜单名称/类别:</td>
-                        <td><input class="common-text" placeholder="菜单名称/类别" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
-                        <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div class="result-content">
-            <table class="result-tab" width="100%">
-                <tr>
-                    <th>菜单ID</th>
-                    <th>菜单名称</th>
-                    <th>图标icon</th>
-                    <th>nav_url</th>
-                    <th>类别</th>
-                    <th>操作</th>
-                </tr>
-                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($vo['nav_id']); ?></td>
-                        <td><?php echo ($vo['nav_name']); ?></td>
-                        <td><i class="iconfont"><?php echo ($vo["nav_e"]); ?></i></td>
-                        <td><?php echo ($vo['nav_url']); ?></td>
-                        <td><?php echo ($vo['cat_id']); ?></td>
-                        <td>
-                            <a class="link-update" href="<?php echo U('Menu/edit#1#0',array('nav_id'=>$vo['nav_id']));?>#0#0">修改|</a>
-                            <a href="javascript:void(0)" class="link-del" onclick="cexiao('<?php echo ($vo["nav_id"]); ?>')">删除</a>
-                        </td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
-            </table>
-            <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
-        </div>
-
+        </form>
     </div>
 </div>
-<!--/main-->
+<script>
+    function subform(){
+        $('#myform').submit();
+    }
+</script>
 </div>
 </body>
 </html>
-<script>
-    function cexiao(nav_id){
-        layer.confirm('确定删除吗？', {
-            btn: ['确定','取消'], //按钮
-            title: '撤销删除'
-        }, function(){
-            $.post("<?php echo U('Menu/del');?>",{nav_id:nav_id},function(data){
-                if(data['status'] == 1){
-                    layer.msg(data['info'],{icon:1});
-                    setTimeout(function(){location.reload();},1000);
-                }else{
-                    layer.msg(data['info']);
-                }
-            })
-        }, function(){
-            layer.msg('已取消');
-        });
-    }
-</script>

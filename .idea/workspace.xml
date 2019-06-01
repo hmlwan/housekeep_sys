@@ -26,24 +26,53 @@
     <favorites_list name="xiao" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.82552916">
+    <splitter split-orientation="horizontal" split-proportion="0.30504587">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/App/Admin/View/Menu/index.html">
+          <file leaf-file-name="JobController.class.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/App/Admin/Controller/JobController.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+                <state relative-caret-position="299">
+                  <caret line="206" column="36" lean-forward="false" selection-start-line="206" selection-start-column="32" selection-end-line="206" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#1122#2147#0#PHP" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ayi_add.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/ayi_add.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="483">
+                  <caret line="71" column="75" lean-forward="false" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
+                  <folding>
+                    <element signature="n#style#0;n#img#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#11;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#12;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#13;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#14;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pub_task_add.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/pub_task_add.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="588">
+                  <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MenuController.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/App/Admin/Controller/MenuController.class.php">
+          <file leaf-file-name="pub_task.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/pub_task.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="404">
-                  <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                <state relative-caret-position="609">
+                  <caret line="56" column="44" lean-forward="false" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
                   <folding />
                 </state>
               </provider>
@@ -52,12 +81,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="edit.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/App/Admin/View/Menu/edit.html">
+        <leaf>
+          <file leaf-file-name="pub_task_add.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/pub_task_add.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="747">
-                  <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="63" />
+                <state relative-caret-position="768">
+                  <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -104,9 +133,9 @@
       <find>img</find>
       <find>file_input</find>
       <find>upload_img</find>
-      <find>member_id</find>
       <find>upload_logo</find>
       <find>shortMessage</find>
+      <find>member_id</find>
     </findStrings>
     <replaceStrings>
       <replace>/Public/Mobile/images/jingcai</replace>
@@ -135,15 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/App/Mobile/View/Login/index.html" />
-        <option value="$PROJECT_DIR$/App/Mobile/View/Login/forgetpwd.html" />
-        <option value="$PROJECT_DIR$/App/Mobile/View/Member/addbank.html" />
-        <option value="$PROJECT_DIR$/App/Mobile/View/Member/modifypwd.html" />
-        <option value="$PROJECT_DIR$/App/Mobile/View/Trade/withdraw.html" />
-        <option value="$PROJECT_DIR$/App/Mobile/View/Reg/index.html" />
-        <option value="$PROJECT_DIR$/App/Mobile/View/FullInfo/full_info.html" />
-        <option value="$PROJECT_DIR$/App/Mobile/Controller/MemberController.class.php" />
-        <option value="$PROJECT_DIR$/App/Mobile/View/Member/upload_qrcode.html" />
         <option value="$PROJECT_DIR$/App/Admin/Common/function.php" />
         <option value="$PROJECT_DIR$/App/Mobile/Common/function.php" />
         <option value="$PROJECT_DIR$/App/Mobile/View/Public/header.html" />
@@ -180,12 +200,21 @@
         <option value="$PROJECT_DIR$/App/Admin/View/Config/add_config.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Config/add.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html" />
-        <option value="$PROJECT_DIR$/App/Admin/View/Public/left.html" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/ConfigController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Config/index.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Menu/edit.html" />
-        <option value="$PROJECT_DIR$/App/Admin/Controller/MenuController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Menu/index.html" />
+        <option value="$PROJECT_DIR$/App/Admin/Controller/MenuController.class.php" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Public/left.html" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Job/add.html" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Job/job_add.html" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Job/ayi_add.html" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Job/index.html" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Job/ayi.html" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Job/pub_task__add.html" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Job/pub_task.html" />
+        <option value="$PROJECT_DIR$/App/Admin/Controller/JobController.class.php" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Job/pub_task_add.html" />
       </list>
     </option>
   </component>
@@ -229,60 +258,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -388,7 +363,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Config" />
+              <option name="myItemId" value="Job" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -438,11 +413,11 @@
       <recent name="D:\WWW\xiao_1\App\Mobile\View\Auction" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WWW\housekeep_sys\App\Admin\View\Job" />
       <recent name="D:\WWW\housekeep_sys\App\Admin\Controller" />
       <recent name="D:\WWW\housekeep_sys\App\Admin\View\Menu" />
       <recent name="D:\WWW\housekeep_sys\App\Admin\View\Config" />
       <recent name="D:\WWW\task_1\Public\Mobile\images\task" />
-      <recent name="D:\WWW\task_1\App\Mobile\View\Trade" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -603,18 +578,18 @@
       <workItem from="1559135688435" duration="7029000" />
       <workItem from="1559198381019" duration="15000" />
       <workItem from="1559202267802" duration="365000" />
-      <workItem from="1559217086315" duration="13811000" />
+      <workItem from="1559217086315" duration="25797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1078990000" />
+    <option name="totallyTimeSpent" value="1090976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16897655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07036247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -720,29 +695,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/phpMyAdmin/js/openlayers/OpenLayers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="1217" column="160" lean-forward="false" selection-start-line="1217" selection-start-column="160" selection-end-line="1217" selection-end-column="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Mobile/View/FullInfo/pay_deposit.html" />
-    <entry file="file://$PROJECT_DIR$/App/Mobile/View/FullInfo/pay_pub.html" />
-    <entry file="file://$PROJECT_DIR$/App/Common/Controller/CommonController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding>
-            <marker date="1557589856000" expanded="true" signature="418:525" ph="{...}" />
-            <marker date="1557589856000" expanded="true" signature="672:778" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Task/index.html" />
-    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Member/index.html" />
-    <entry file="file://$PROJECT_DIR$/App/Mobile/Controller/FullInfoController.class.php" />
     <entry file="file://$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" />
     <entry file="file://$PROJECT_DIR$/Public/Mobile/images/task/new_sq_btn.png" />
     <entry file="file://$PROJECT_DIR$/App/Runtime/Cache/Mobile/4d283a1486ac848e0fc9af4a86d186fa.php">
@@ -868,34 +820,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/PubTaskController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="49" column="52" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Config/index1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="59" column="68" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/PubTask/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/ConfigController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="41" column="57" lean-forward="true" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -958,24 +886,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Public/left.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="53" column="104" lean-forward="true" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/MenuController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="68" column="57" lean-forward="false" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Menu/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="28" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/MenuController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/ayi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="70" lean-forward="false" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#if#0;n#td#4;n#tr#0;n#volist#0;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/job_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="41" column="90" lean-forward="false" selection-start-line="41" selection-start-column="90" selection-end-line="41" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Common/Controller/CommonController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7497">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <marker date="1557589856000" expanded="true" signature="418:525" ph="{...}" />
+            <marker date="1557589856000" expanded="true" signature="672:778" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdminController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/ConfigController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/ayi_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="71" column="75" lean-forward="false" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#11;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#12;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#13;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#14;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/pub_task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="56" column="44" lean-forward="false" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/JobController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="206" column="36" lean-forward="false" selection-start-line="206" selection-start-column="32" selection-end-line="206" selection-end-column="36" />
+          <folding>
+            <element signature="e#1122#2147#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/pub_task_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
           <folding />
         </state>
       </provider>

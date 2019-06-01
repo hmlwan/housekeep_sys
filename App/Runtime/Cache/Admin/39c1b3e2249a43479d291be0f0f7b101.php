@@ -134,14 +134,16 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
 </script>
 
+<!--/sidebar-->
 
 <div class="main-wrap">
 
     <div class="crumb-wrap">
-        <div class="crumb-list"><i class="icon-font"></i>
-            <a href="<?php echo U('Index/index');?>">系统管理</a>
+        <div class="crumb-list">
+            <i class="icon-font"></i>
+            <a href="<?php echo U('Index/index');?>">首页</a>
             <span class="crumb-step">&gt;</span>
-            <span class="crumb-name">菜单配置</span>
+            <span class="crumb-name">高单管理</span>
         </div>
     </div>
     <div class="search-wrap">
@@ -151,13 +153,13 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
         <div class="result-title">
             <div class="result-list">
-                <a href="<?php echo U('Menu/edit');?>#1#0"><i class="icon-font"></i>新增菜单</a>
+                <a href="<?php echo U('Job/pub_task_add');?>#2#2"><i class="icon-font"></i>新增高单</a>
             </div>
-            <form action="<?php echo U('Menu/index');?>" method="get">
+            <form action="<?php echo U('Job/pub_task');?>" method="get">
                 <table class="search-tab">
                     <tr>
-                        <td width="100">菜单名称/类别:</td>
-                        <td><input class="common-text" placeholder="菜单名称/类别" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
+                        <td width="50">姓名:</td>
+                        <td><input class="common-text" placeholder="姓名" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
                         <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
                     </tr>
                 </table>
@@ -166,22 +168,43 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
         <div class="result-content">
             <table class="result-tab" width="100%">
                 <tr>
-                    <th>菜单ID</th>
-                    <th>菜单名称</th>
-                    <th>图标icon</th>
-                    <th>nav_url</th>
-                    <th>类别</th>
+
+                    <th>ID</th>
+                    <th>标题</th>
+                    <th>工作地点（城市）</th>
+                    <th>工作年限</th>
+                    <th>工作内容</th>
+                    <th>阿姨要求</th>
+                    <th>薪资待遇</th>
+                    <th>联系人</th>
+                    <th>联系电话</th>
+                    <th>总部地址</th>
+                    <th>乘车路线</th>
+                    <th>状态</th>
+                    <th>操作信息</th>
                     <th>操作</th>
                 </tr>
-                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($vo['nav_id']); ?></td>
-                        <td><?php echo ($vo['nav_name']); ?></td>
-                        <td><i class="iconfont"><?php echo ($vo["nav_e"]); ?></i></td>
-                        <td><?php echo ($vo['nav_url']); ?></td>
-                        <td><?php echo ($vo['cat_id']); ?></td>
+                <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td><?php echo ($vo['id']); ?></td>
+                        <td><?php echo ($vo['title']); ?></td>
+                        <td><?php echo ($vo['city']); ?></td>
+                        <td><?php echo ($vo['work_years']); ?></td>
+                        <td><?php echo ($vo['content']); ?></td>
+                        <td><?php echo ($vo['ask_skill']); ?></td>
+                        <td><?php echo ($vo['salary']); ?></td>
+                        <td><?php echo ($vo['contact_person']); ?></td>
+                        <td><?php echo ($vo['contact_phone']); ?></td>
+                        <td><?php echo ($vo['address']); ?></td>
+                        <td><?php echo ($vo['bus_route']); ?></td>
+                        <td><?php if($vo['status'] == 1): ?>开启<?php endif; ?>
+                            <?php if($vo['status'] == 0): ?>关闭<?php endif; ?>
+                        </td>
+                        <td><?php echo ($vo['op_man']); ?><br>
+                            <?php echo (date("Y-m-d H:i:s",$vo['op_time'] )); ?>
+                        </td>
                         <td>
-                            <a class="link-update" href="<?php echo U('Menu/edit#1#0',array('nav_id'=>$vo['nav_id']));?>#0#0">修改|</a>
-                            <a href="javascript:void(0)" class="link-del" onclick="cexiao('<?php echo ($vo["nav_id"]); ?>')">删除</a>
+                            <a class="link-update" href="<?php echo U('Job/pub_task_add#2#2',array('id'=>$vo['id']));?>#13#0">修改|</a>
+                            <a href="javascript:void(0)" class="link-del" onclick="cexiao(<?php echo ($vo["id"]); ?>)">删除</a>
                         </td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -196,12 +219,12 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 </body>
 </html>
 <script>
-    function cexiao(nav_id){
+    function cexiao(id){
         layer.confirm('确定删除吗？', {
             btn: ['确定','取消'], //按钮
             title: '撤销删除'
         }, function(){
-            $.post("<?php echo U('Menu/del');?>",{nav_id:nav_id},function(data){
+            $.post("<?php echo U('Job/del');?>",{id:id,model:'pub_task'},function(data){
                 if(data['status'] == 1){
                     layer.msg(data['info'],{icon:1});
                     setTimeout(function(){location.reload();},1000);
@@ -212,5 +235,6 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
         }, function(){
             layer.msg('已取消');
         });
+
     }
 </script>

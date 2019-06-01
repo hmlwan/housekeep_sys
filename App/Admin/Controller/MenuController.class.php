@@ -28,13 +28,13 @@ class MenuController extends AdminController {
 	    if(IS_POST){
 	        $nav_id = I('post.nav_id','','');
 	        $nav_name = I('post.nav_name','','');
-	        $nav_e = I('post.nav_e','&#xe6f7;','');
+	        $nav_e = I('post.nav_e','','');
 	        $nav_url = I('post.nav_url','','');
 	        $cat_id = I('post.cat_id','','');
 
 	        $save_data = array(
 	            'nav_name' => $nav_name,
-                'nav_e' => $nav_e,
+                'nav_e' => $nav_e ? $nav_e :"&#xe6f7;",
                 'nav_url' => $nav_url,
                 'cat_id' => $cat_id
             );
