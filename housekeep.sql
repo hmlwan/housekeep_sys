@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-06-01 20:32:32
+Date: 2019-06-03 21:22:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3573,14 +3573,16 @@ CREATE TABLE `blue_company_info` (
   `culture` varchar(200) DEFAULT '' COMMENT '企业文化',
   `service` varchar(1024) NOT NULL DEFAULT '企业服务',
   `img` varchar(2048) NOT NULL DEFAULT '' COMMENT '服务图片',
+  `status` tinyint(4) DEFAULT '1' COMMENT '状态 1：开启0：关闭',
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_company_info
 -- ----------------------------
+INSERT INTO `blue_company_info` VALUES ('1', '佳禾国际', '    佳禾国际家政隶属上海佳禾家庭服务有限公司、上海市徐汇区总工会会员单位、上海市家政协会会员单位、上海市徐汇区妇女联合会执委单位、上海市家政行业第一个“五一劳动奖章”获得单位，集培训和业务为一体。登记在册阿姨数量10万+，累计培训8年+，累计培训阿姨8万+，拥有海量优质阿姨资源。培训品质一直深受客户好评，满意度达90%以上。 佳禾国际家政中国家政服务业的创新者，定制复合型家政人员。是一家提供高级育婴师、月嫂、家庭早教师家务助理、住家保姆、海外派遣、涉外保姆的国际性家政服务公司。对客户公司秉着用爱呵护、关爱千万家的宗旨,用心倾听每个客户的需求，提供、品质、贴心的家政服务。对员工公司秉着勇担重任、服务为荣的宗旨，进行细致、科学的系统培训，使员工永立潮头、不忘初心，更好地服务社会。上海佳禾真诚期待您的咨询.', '爱心+责任+奉献', ' 佳禾国际家政以“奉献爱、体验爱”为宗旨，创新“爱+呵护、爱+细心、爱+耐心、爱+安心、爱+科学喂养”的五大“爱+”服务，帮助家庭成员建立更温馨的亲子关系，激发婴儿成长发育的潜能，让爱更有力和能量、让家更为舒心。', '[\"\\/Uploads\\/Public\\/Uploads\\/2019-06-03\\/5cf4d0627cb61.jpg\",\"\\/Uploads\\/Public\\/Uploads\\/2019-06-03\\/5cf4cf5c3cfd9.jpg\",\"\\/Uploads\\/Public\\/Uploads\\/2019-06-03\\/5cf4cf5c48771.jpg\",\"\\/Uploads\\/Public\\/Uploads\\/2019-06-03\\/5cf4d093473e9.jpg\"]', '1', '1559548051', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_config`
@@ -3832,7 +3834,7 @@ CREATE TABLE `blue_pub_task` (
 -- ----------------------------
 -- Records of blue_pub_task
 -- ----------------------------
-INSERT INTO `blue_pub_task` VALUES ('1', '烧饭保洁', '1-3年,3-5年', '住家', '上海', '烧饭保洁，搭手接送宝宝上下学', '勤快，可以跟老人相处', '6000-8000/26天（新手六千）', '佳禾婷婷老师', '上海市徐汇区徐虹北路3号2楼整层（老百姓大药房楼上）', '地铁3、4、9号线宜山路站下，4号线5号口出步行50米', '18516339538', '1', '0', 'admin');
+INSERT INTO `blue_pub_task` VALUES ('1', '烧饭保洁', '1-3年,3-5年', '住家', '上海', '烧饭保洁，搭手接送宝宝上下学', '勤快，可以跟老人相处', '6000-8000/26天（新手六千）', '佳禾婷婷老师', '上海市徐汇区徐虹北路3号2楼整层（老百姓大药房楼上）', '地铁3、4、9号线宜山路站下，4号线5号口出步行50米', '18516339538', '1', '1559382393', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_special_service`
@@ -3845,11 +3847,14 @@ CREATE TABLE `blue_special_service` (
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_special_service
 -- ----------------------------
+INSERT INTO `blue_special_service` VALUES ('1', '起居照顾', '/Uploads/Public/Uploads/2019-06-03/5cf5192e250bc.png', '1559566638', 'admin');
+INSERT INTO `blue_special_service` VALUES ('2', '常见疾病预防', '/Uploads/Public/Uploads/2019-06-03/5cf519514a664.jpg', '1559566673', 'admin');
+INSERT INTO `blue_special_service` VALUES ('3', '科学喂养', '/Uploads/Public/Uploads/2019-06-03/5cf519609171c.jpg', '1559566688', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_sub_company`
@@ -3861,14 +3866,16 @@ CREATE TABLE `blue_sub_company` (
   `address` varchar(200) DEFAULT '' COMMENT '地址',
   `contact` varchar(50) NOT NULL DEFAULT '联系人',
   `phone` varchar(50) NOT NULL DEFAULT '' COMMENT '联系电话',
+  `status` tinyint(4) DEFAULT '1' COMMENT '状态 1：开启 0：关闭',
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_sub_company
 -- ----------------------------
+INSERT INTO `blue_sub_company` VALUES ('1', '上海总公司', '上海市徐汇区徐虹北路3号2楼', '张老师', '3062761000（微信同步）', '1', '1559537393', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_teacher_power`
@@ -3880,14 +3887,16 @@ CREATE TABLE `blue_teacher_power` (
   `img` varchar(200) DEFAULT '' COMMENT '头像',
   `position` varchar(100) DEFAULT '' COMMENT '职位',
   `introduce` varchar(1024) DEFAULT '' COMMENT '介绍',
+  `status` tinyint(4) DEFAULT '1' COMMENT '状态 1：开启 0：关闭',
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_teacher_power
 -- ----------------------------
+INSERT INTO `blue_teacher_power` VALUES ('1', '李慧茹', '/Uploads/Public/Uploads/2019-06-03/5cf49aa62f9f7.jpg', '培训部主管', '毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利高级亲子教师资格证、劳动局母婴护理证等职业资格证书；教学深入浅出、寓教于乐，能因材施教、与时俱进、注重学以致用等。', '1', '1559534246', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_train_course`
@@ -3898,11 +3907,13 @@ CREATE TABLE `blue_train_course` (
   `course_name` varchar(128) DEFAULT '' COMMENT '课程姓名',
   `course_img` varchar(200) DEFAULT '' COMMENT '课程图片',
   `introduce` varchar(1024) DEFAULT '' COMMENT '介绍',
+  `status` tinyint(4) DEFAULT '1' COMMENT '状态 1：开启 0关闭',
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_train_course
 -- ----------------------------
+INSERT INTO `blue_train_course` VALUES ('1', '母婴护理培训（月嫂）', '/Uploads/Public/Uploads/2019-06-03/5cf49d8ae0c3f.jpg', '月嫂是爱心行业，更是朝阳产业，加强月子护理的意识，可以帮助新妈妈的身体良好康复，有利于宝宝的健康成长。课程主要包括针对产妇产褥期的护理常识，以及新生儿科学的喂养及', '1', '1559534986', 'admin');
