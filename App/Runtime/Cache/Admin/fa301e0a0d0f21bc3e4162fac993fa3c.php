@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?>    <!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -113,62 +113,59 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
 </script>
 
-<!--/sidebar-->
+    <!--/sidebar-->
+    <div class="main-wrap">
 
-<div class="main-wrap">
-
-    <div class="crumb-wrap">
-        <div class="crumb-list">
-            <i class="icon-font"></i>
-            <a href="<?php echo U('Index/index');?>">首页</a>
-            <span class="crumb-step">&gt;</span>
-            <span class="crumb-name">预约阿姨</span>
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Index/index');?>">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">管理员管理</span></div>
         </div>
-    </div>
-    <div class="search-wrap">
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="<?php echo U('Manage/index');?>" method="post">
+                    <table class="search-tab">
+                        <tr>
+                            <th width="70">管理员:</th>
+                            <td><input class="common-text" placeholder="管理员" name="username" type="text"></td>
+                            <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+				
+            </div>
+        </div>
+        <div class="result-wrap">
 
-    </div>
-    <div class="result-wrap">
-
-        <div class="result-title">
-            <!--<div class="result-list">-->
-                <!--<a href="<?php echo U('Job/job_add');?>#2#0"><i class="icon-font"></i>新增类型</a>-->
-            <!--</div>-->
-            <form action="<?php echo U('Record/order_ayi');?>" method="get">
-                <table class="search-tab">
+            <div class="result-title">
+                <div class="result-list">
+                    <a href="<?php echo U('Manage/addAdmin');?>"><i class="icon-font"></i>新增管理员</a>
+                </div>
+            </div>
+            <div class="result-content">
+                <table class="result-tab" width="100%">
                     <tr>
-                        <td width="50">姓名:</td>
-                        <td><input class="common-text" placeholder="姓名" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
-                        <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
+                        <th>ID</th>
+                        <th>管理员名称</th>
+                        <th>状态</th>
+                        <th>操作</th>
                     </tr>
+                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <td><?php echo ($vo['admin_id']); ?></td>
+                            <td><?php echo ($vo['username']); if(($vo["nav"]) == ""): ?>&nbsp;（此账号尚未分配权限）<?php endif; ?></td>
+                            <td><?php if(($vo["status"]) == "0"): ?>可用<?php else: ?>停用<?php endif; ?></td>
+                            <td>
+                                <a class="link-update" href="<?php echo U('Manage/addAdmin',array('admin_id'=>$vo['admin_id']));?>">修改信息</a>
+                                <a class="link-update" href="<?php echo U('Manage/showNav',array('admin_id'=>$vo['admin_id']));?>">修改权限</a>
+                                <?php if(($vo["admin_id"]) == "1"): else: ?><a class="link-del" href="<?php echo U('Manage/delMember',array('admin_id'=>$vo['admin_id']));?>" onclick="return confirm('确认删除吗？')">删除</a><?php endif; ?>
+                            </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
                 </table>
-            </form>
+                <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
+            </div>
+
         </div>
-        <div class="result-content">
-            <table class="result-tab" width="100%">
-                <tr>
-
-                    <th>ID</th>
-                    <th>姓名</th>
-                    <th>手机号码</th>
-                    <th>意向课程</th>
-                    <th>提交时间</th>
-                </tr>
-                <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($vo['id']); ?></td>
-                        <td><?php echo ($vo['name']); ?></td>
-                        <td><?php echo ($vo['phone']); ?></td>
-                        <td><?php echo ($vo['jober_id']); ?></td>
-                        <td><?php echo (date("Y-m-d H:i:s",$vo['create_time'] )); ?></td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
-            </table>
-            <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
-        </div>
-
     </div>
-</div>
-<!--/main-->
+    <!--/main-->
 </div>
 </body>
 </html>

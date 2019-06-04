@@ -36,6 +36,8 @@
 
                     <th>ID</th>
                     <th>工作类型名称</th>
+                    <th>概述</th>
+                    <th>图片</th>
                     <th>状态</th>
                     <th>操作人</th>
                     <th>创建时间</th>
@@ -45,6 +47,13 @@
                     <tr>
                         <td>{$vo['type_id']}</td>
                         <td>{$vo['type_name']}</td>
+                        <td>{$vo['introduce']}</td>
+                        <td>
+                            <a href="{$vo['img']}" target="_blank">
+                                <img src="{$vo['img']}" style="width: 100px;height: 100px" alt="">
+                            </a>
+
+                        </td>
                         <td><if condition="$vo['status'] eq 1">
                                 开启
                             </if>

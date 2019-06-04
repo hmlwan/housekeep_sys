@@ -116,164 +116,95 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 <!--/sidebar-->
 
 <div class="main-wrap">
+
     <div class="crumb-wrap">
-        <div class="crumb-list"><i class="icon-font"></i>首页</div>
+        <div class="crumb-list">
+            <i class="icon-font"></i>
+            <a href="<?php echo U('Index/index');?>">首页</a>
+            <span class="crumb-step">&gt;</span>
+            <span class="crumb-name">工作类型管理</span>
+        </div>
+    </div>
+    <div class="search-wrap">
+
     </div>
     <div class="result-wrap">
+
         <div class="result-title">
-            <h1>快捷操作</h1>
-        </div>
-        <div class="result-content">
-            <div class="short-wrap">
-                <li>当前登录管理员：<?php echo ((isset($admin_user["name"]) && ($admin_user["name"] !== ""))?($admin_user["name"]):'admin'); ?></li>
+            <div class="result-list">
+                <a href="<?php echo U('Job/job_add');?>#2#0"><i class="icon-font"></i>新增类型</a>
             </div>
-        </div>
-    </div>
-    <!--<div class="result-wrap">-->
-        <!--<div class="result-title">-->
-            <!--<h1>当前币种信息</h1>-->
-        <!--</div>-->
-        <!--<div class="result-content">-->
-            <!--<table class="result-tab" width="100%">-->
-                <!--<tr>-->
-                    <!--<th>货币LOGO</th>-->
-                    <!--<th>货币名称</th>-->
-                    <!--<th>英文标识</th>-->
-                    <!--<th>总市值</th>-->
-                    <!--<th>钱包余额</th>-->
-                    <!--<th>最新价格</th>-->
-                    <!--<th>昨日价格</th>-->
-                    <!--<th>24H交易量</th>-->
-                    <!--<th>全站交易量</th>-->
-                    <!--<th>操作</th>-->
-                <!--</tr>-->
-                <!--<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>-->
-                    <!--<tr>-->
-                        <!--<td><?php if(!empty($vo["currency_logo"])): ?><img  style="height:40px;"src='<?php echo ($vo["currency_logo"]); ?>' /><?php else: ?>暂无图片数据<?php endif; ?></td>-->
-                        <!--<td><?php echo ((isset($vo["currency_name"]) && ($vo["currency_name"] !== ""))?($vo["currency_name"]):'暂无'); ?></td>-->
-                        <!--<td><?php echo ((isset($vo["currency_mark"]) && ($vo["currency_mark"] !== ""))?($vo["currency_mark"]):'暂无'); ?></td>-->
-                        <!--<td>￥<?php echo ((isset($vo["currency_all_money"]) && ($vo["currency_all_money"] !== ""))?($vo["currency_all_money"]):'0.00'); ?></td>-->
-                        <!--<td><?php echo ((isset($vo["balance"]) && ($vo["balance"] !== ""))?($vo["balance"]):'0.00'); ?></td>-->
-                        <!--<td><?php echo ((isset($vo["new_price"]) && ($vo["new_price"] !== ""))?($vo["new_price"]):'0.00'); ?></td>-->
-                        <!--<td><?php echo ((isset($vo["old_price"]) && ($vo["old_price"] !== ""))?($vo["old_price"]):'0.00'); ?></td>-->
-                        <!--<td><?php echo ((isset($vo["24H_done_num"]) && ($vo["24H_done_num"] !== ""))?($vo["24H_done_num"]):'0.00'); ?></td>-->
-                        <!--<td><?php echo ((isset($vo["all_done_num"]) && ($vo["all_done_num"] !== ""))?($vo["all_done_num"]):'0.00'); ?></td>-->
-                        <!--<td>-->
-                            <!--<a class="link-update" href="<?php echo U('Currency/add',array('currency_id'=>$vo['currency_id']));?>">查看币种信息</a><br>-->
-                            <!--<a class="link-update" href="<?php echo U('Trade/trade',array('currency_id'=>$vo['currency_id']));?>">查看交易记录</a><br>-->
-                            <!--<a class="link-update" href="<?php echo U('Trade/orders',array('currency_id'=>$vo['currency_id']));?>">查看委托记录</a>-->
-                        <!--</td>-->
-                    <!--</tr>-->
-                <!--<?php endforeach; endif; else: echo "$empty" ;endif; ?>-->
-            <!--</table>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="result-wrap">-->
-        <!--<div class="result-title">-->
-            <!--<h1>全站统计信息</h1>-->
-        <!--</div>-->
-        <!--<div class="result-content">-->
-            <!--<table class="result-tab" width="100%">-->
-                <!--<tr>-->
-                    <!--<td>网站总收入</td>-->
-                    <!--<td><?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                    <!--<td>网站总支出</td>-->
-                    <!--<td><?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>会员总人数</td>-->
-                    <!--<td><?php echo ((isset($member) && ($member !== ""))?($member):'0'); ?>人</td>-->
-                    <!--<td>众筹总数量</td>-->
-                    <!--<td><?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>人民币收入</td>-->
-                    <!--<td>￥<?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                    <!--<td>人民币支出</td>-->
-                    <!--<td>￥<?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td><?php echo ($config["xnb"]); ?>收入</td>-->
-                    <!--<td><?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                    <!--<td><?php echo ($config["xnb"]); ?>支出</td>-->
-                    <!--<td><?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>充值数量</td>-->
-                    <!--<td><?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                    <!--<td>提现数量</td>-->
-                    <!--<td><?php echo ((isset($a) && ($a !== ""))?($a):'0'); ?></td>-->
-                <!--</tr>-->
-            <!--</table>-->
-        <!--</div>-->
-    <!--</div>-->
-    <div class="result-wrap">
-        <div class="result-title">
-            <h1>服务器信息</h1>
+            <form action="<?php echo U('Job/index');?>" method="get">
+                <table class="search-tab">
+                    <tr>
+                        <td width="50">名称:</td>
+                        <td><input class="common-text" placeholder="名称" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
+                        <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
+                    </tr>
+                </table>
+            </form>
         </div>
         <div class="result-content">
             <table class="result-tab" width="100%">
                 <tr>
-                    <td width="20%">系统版本</td>
-                    <td width="20%"><?php echo php_uname('r');?></td>
-                    <td width="20%">服务器操作系统</td>
-                    <td width="40%"><?php echo php_uname('s');?></td>
+
+                    <th>ID</th>
+                    <th>工作类型名称</th>
+                    <th>概述</th>
+                    <th>图片</th>
+                    <th>状态</th>
+                    <th>操作人</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
                 </tr>
-                <tr>
-                    <td>运行环境</td>
-                    <td><?php echo php_sapi_name();?></td>
-                    <td>PHP版本</td>
-                    <td><?php echo PHP_VERSION;?></td>
-                </tr>
-                <tr>
-                    <td>MySql版本</td>
-                    <td><?php echo mysqlnd;?></td>
-                    <td>服务器IP</td>
-                    <td><?php echo GetHostByName($_SERVER['SERVER_NAME']);?></td>
-                </tr>
-                <tr>
-                    <td>你的IP</td>
-                    <td><?php echo $_SERVER['REMOTE_ADDR'];?></td>
-                    <td>服务器端口</td>
-                    <td><?php echo $_SERVER['SERVER_PORT'];?></td>
-                </tr>
-                <tr>
-                    <td>绝对路径</td>
-                    <td><?php echo $_SERVER['DOCUMENT_ROOT'];?></td>
-                    <td>网站域名</td>
-                    <td><?php echo $_SERVER['SERVER_NAME'];?></td>
-                </tr>
-                <tr>
-                    <td>清理缓存</td>
-                    <td><input type="button" id="button" value="清理缓存"/></td>
-                    <input type="hidden" id="type" value="Runtime-Cache"/>
-                    <td>网站开发</td>
-                    <td><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=421905074&site=qq&menu=yes"><img border="0" src="/Public/Admin/images/QQ.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></td>
-                </tr>
-                <tr>
-                    <td>官网地址</td>
-                    <td>www.zhej.com</td>
-                    <td>版权所有</td>
-                    <td>www.zheyj.com</td>
-                </tr>
+                <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td><?php echo ($vo['type_id']); ?></td>
+                        <td><?php echo ($vo['type_name']); ?></td>
+                        <td><?php echo ($vo['introduce']); ?></td>
+                        <td>
+                            <a href="<?php echo ($vo['img']); ?>" target="_blank">
+                                <img src="<?php echo ($vo['img']); ?>" style="width: 100px;height: 100px" alt="">
+                            </a>
+
+                        </td>
+                        <td><?php if($vo['status'] == 1): ?>开启<?php endif; ?>
+                            <?php if($vo['status'] == 0): ?>关闭<?php endif; ?>
+                        </td>
+                        <td><?php echo ($vo['op_man']); ?></td>
+                        <td><?php echo (date("Y-m-d H:i:s",$vo['op_time'] )); ?></td>
+                        <td>
+                            <a class="link-update" href="<?php echo U('Job/job_add#2#0',array('id'=>$vo['type_id']));?>#13#0">修改|</a>
+                            <a href="javascript:void(0)" class="link-del" onclick="cexiao(<?php echo ($vo["type_id"]); ?>)">删除</a>
+                        </td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
             </table>
+            <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
         </div>
+
     </div>
-    <script>
-        $(function(){
-            $('#button').click(function(){
-                if(confirm("确认要清除缓存？")){
-                    var $type=$('#type').val();
-                    $.post("<?php echo U('Index/cache');?>",{type:$type},function(data){
-                        alert("缓存清理成功");
-                    });
-                }else{
-                    return false;
-                }});
-        });
-    </script>
 </div>
 <!--/main-->
 </div>
 </body>
 </html>
+<script>
+    function cexiao(type_id){
+        layer.confirm('确定删除吗？', {
+            btn: ['确定','取消'], //按钮
+            title: '撤销删除'
+        }, function(){
+            $.post("<?php echo U('Job/del');?>",{id:type_id,model:'job_type'},function(data){
+                if(data['status'] == 1){
+                    layer.msg(data['info'],{icon:1});
+                    setTimeout(function(){location.reload();},1000);
+                }else{
+                    layer.msg(data['info']);
+                }
+            })
+        }, function(){
+            layer.msg('已取消');
+        });
+
+    }
+</script>

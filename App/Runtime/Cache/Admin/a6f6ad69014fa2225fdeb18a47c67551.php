@@ -114,61 +114,47 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 </script>
 
 <!--/sidebar-->
-
 <div class="main-wrap">
-
-    <div class="crumb-wrap">
-        <div class="crumb-list">
-            <i class="icon-font"></i>
-            <a href="<?php echo U('Index/index');?>">首页</a>
-            <span class="crumb-step">&gt;</span>
-            <span class="crumb-name">预约阿姨</span>
-        </div>
-    </div>
-    <div class="search-wrap">
-
-    </div>
-    <div class="result-wrap">
-
-        <div class="result-title">
-            <!--<div class="result-list">-->
-                <!--<a href="<?php echo U('Job/job_add');?>#2#0"><i class="icon-font"></i>新增类型</a>-->
-            <!--</div>-->
-            <form action="<?php echo U('Record/order_ayi');?>" method="get">
-                <table class="search-tab">
-                    <tr>
-                        <td width="50">姓名:</td>
-                        <td><input class="common-text" placeholder="姓名" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
-                        <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
+  <div class="crumb-wrap">
+    <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Index/index');?>">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">权限管理</span></div>
+  </div>
+  <div class="search-wrap">
+      <div class="config-title">
+          <h1>&nbsp;&nbsp;&nbsp;<i class="icon-font">&#xe00a;</i>管理员信息设置</h1>
+      </div>
+  </div>
+  <div class="result-wrap">
+    <form action="<?php echo U('Manage/saveNav');?>" method="post">
+      <div class="config-items">
         <div class="result-content">
-            <table class="result-tab" width="100%">
-                <tr>
-
-                    <th>ID</th>
-                    <th>姓名</th>
-                    <th>手机号码</th>
-                    <th>意向课程</th>
-                    <th>提交时间</th>
-                </tr>
-                <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($vo['id']); ?></td>
-                        <td><?php echo ($vo['name']); ?></td>
-                        <td><?php echo ($vo['phone']); ?></td>
-                        <td><?php echo ($vo['jober_id']); ?></td>
-                        <td><?php echo (date("Y-m-d H:i:s",$vo['create_time'] )); ?></td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
-            </table>
-            <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
+          权限列表：
+          <table width="100%" class="result-tab">
+            <input type="hidden" value="<?php echo ($id); ?>" name="admin_id" />
+            <tbody>
+              <tr>
+              <?php if(is_array($nav)): $key = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?><td><input name="nav[]" type="checkbox" value="<?php echo ($vo["nav_id"]); ?>" class="xuanzhong" <?php if(($vo["status"]) == "1"): ?>checked="checked"<?php endif; ?> /><?php echo ($vo["nav_name"]); ?>
+                  </td>
+              <?php if($key%4==0): ?></tr><tr><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+              </tr>
+                <tr><td colspan="4" style="text-align:center;">
+                <input type="button" value="全选" onclick="quanxuan()">
+                <input type="button" value="全不选" onclick="buxuan()">
+                <input type="submit" value="确认"></td></tr>
+            </tbody>
+          </table>
         </div>
-
-    </div>
+      </div>
+    </form>
+  </div>
 </div>
+<script>
+	function quanxuan(){
+		$(".xuanzhong").prop("checked",true);
+	}
+	function buxuan(){
+		$(".xuanzhong").prop("checked",false);
+	}
+</script>
 <!--/main-->
 </div>
-</body>
-</html>
+</body></html>

@@ -44,8 +44,14 @@ class JobController extends AdminController {
         $model= D('job_type');
         if(IS_POST){
             $id = I("post.id");
+            if($_FILES["img"]["tmp_name"]){
+                $img  = $this->upload($_FILES["img"]);
+            }else{
+                $img = I('img1');
+            }
             if($r = $model->create()){
                 $r['op_time'] = time();
+                $r['img'] = $img;
                 $r['op_man'] = M("admin")->where(array('admin_id'=>$_SESSION['admin_userid']))->getField('username');
                 if($id){
                     $res = $model->where(array('type_id'=>$id))->save($r);

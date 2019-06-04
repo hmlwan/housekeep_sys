@@ -11,16 +11,6 @@ class IndexController extends AdminController {
         $this->display('Public:404');
     }
     public function index(){
-        //币种信息
-//        $list=M('Currency')->select();
-//        foreach ($list as $k=>$v){
-//            $currency_message=$this->getCurrencyMessageById($v['currency_id']);
-//            $list[$k]=array_merge($currency_message,$list[$k]);
-//            $list[$k]['balance']=$this->get_qianbao_balance($v['port_number']);
-//        }
-//
-//        $this->assign('list',$list);
-//        $this->assign('empty','暂无数据');
         $this->display();
     }
 

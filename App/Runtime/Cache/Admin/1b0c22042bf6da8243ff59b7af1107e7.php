@@ -113,62 +113,80 @@ $(".sub-menu").eq(num[1]).children("li").eq(num[2]).addClass("on");
 
 </script>
 
+<style>
+    .glyphicon-minus:before {
+        content: "\2212";
+    }
+    .glyphicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+    }
+</style>
 <!--/sidebar-->
-
 <div class="main-wrap">
-
     <div class="crumb-wrap">
-        <div class="crumb-list">
-            <i class="icon-font"></i>
-            <a href="<?php echo U('Index/index');?>">首页</a>
-            <span class="crumb-step">&gt;</span>
-            <span class="crumb-name">预约阿姨</span>
-        </div>
-    </div>
-    <div class="search-wrap">
-
+        <div class="crumb-list"><i class="icon-font">
+        </i><a href="<?php echo U('Index/index');?>">首页</a>
+            <span class="crumb-step">&gt;</span><span class="crumb-name">工作类型管理</span></div>
     </div>
     <div class="result-wrap">
+        <form action="<?php echo U('Job/job_add');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo ($info["type_id"]); ?>">
+            <div class="config-items">
+                <div class="config-title">
+                    <h1><i class="icon-font">&#xe00a;</i>工作类型添加</h1>
+                </div>
+                <div class="result-content">
+                    <table width="100%" class="insert-tab">
+                        <tbody>
+                        <tr>
+                            <th><i class="require-red">*</i>类型名称：</th>
+                            <td><input id="type_name"  name="type_name" value="<?php echo ($info["type_name"]); ?>" type="text"  class="common-text btn10"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>概述：</th>
+                            <td><input id="introduce"  name="introduce" value="<?php echo ($info["introduce"]); ?>" type="text"  class="common-text  btn10"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>图片：</th>
+                            <td><input id="img"  name="img" value="<?php echo ($info["img"]); ?>" type="file"  class="common-text  btn10">
+                                <img src="<?php echo ($info["img"]); ?>" style="width: 80px;height: 80px" alt="">
+                                <input type="hidden" value="<?php echo ($info["img"]); ?>" name="img1">
+                            </td>
+                        </tr>
 
-        <div class="result-title">
-            <!--<div class="result-list">-->
-                <!--<a href="<?php echo U('Job/job_add');?>#2#0"><i class="icon-font"></i>新增类型</a>-->
-            <!--</div>-->
-            <form action="<?php echo U('Record/order_ayi');?>" method="get">
-                <table class="search-tab">
-                    <tr>
-                        <td width="50">姓名:</td>
-                        <td><input class="common-text" placeholder="姓名" name="string" type="text" value="<?php echo ($_GET['string']); ?>"></td>
-                        <td><input class="btn btn-primary btn2"  value="查询" type="submit"></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div class="result-content">
-            <table class="result-tab" width="100%">
-                <tr>
-
-                    <th>ID</th>
-                    <th>姓名</th>
-                    <th>手机号码</th>
-                    <th>意向课程</th>
-                    <th>提交时间</th>
-                </tr>
-                <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($vo['id']); ?></td>
-                        <td><?php echo ($vo['name']); ?></td>
-                        <td><?php echo ($vo['phone']); ?></td>
-                        <td><?php echo ($vo['jober_id']); ?></td>
-                        <td><?php echo (date("Y-m-d H:i:s",$vo['create_time'] )); ?></td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
-            </table>
-            <div class="list-page"> <ul><?php echo ($page); ?></ul></div>
-        </div>
-
+                        <tr>
+                            <th><i class="require-red"></i>状态：</th>
+                            <td>
+                                <select name="status" id="status"  class="common-text">
+                                    <option value="1" <?php if($info['status'] == '1'): ?>selected<?php endif; ?> >开启</option>
+                                    <option value="0" <?php if($info['status'] == '0'): ?>selected<?php endif; ?>>关闭</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input type="button" onclick="subform()" value="提交" class="btn btn-primary btn6 mr10">
+                                <a href="<?php echo U('Job/index');?>"><input type="button" value="返回"  class="btn btn6"></a>
+                            </td>
+                        </tr>
+                        </tbody></table>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
-<!--/main-->
+<script>
+    function subform(){
+        $('#myform').submit();
+    }
+</script>
 </div>
 </body>
 </html>

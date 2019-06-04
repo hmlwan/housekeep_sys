@@ -32,8 +32,20 @@
                         <tbody>
                         <tr>
                             <th><i class="require-red">*</i>类型名称：</th>
-                            <td><input id="type_name"  name="type_name" value="{$info.type_name}" type="text"  class="common-text"></td>
+                            <td><input id="type_name"  name="type_name" value="{$info.type_name}" type="text"  class="common-text btn10"></td>
                         </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>概述：</th>
+                            <td><input id="introduce"  name="introduce" value="{$info.introduce}" type="text"  class="common-text  btn10"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>图片：</th>
+                            <td><input id="img"  name="img" value="{$info.img}" type="file"  class="common-text  btn10">
+                                <img src="{$info.img}" style="width: 80px;height: 80px" alt="">
+                                <input type="hidden" value="{$info.img}" name="img1">
+                            </td>
+                        </tr>
+
                         <tr>
                             <th><i class="require-red"></i>状态：</th>
                             <td>
