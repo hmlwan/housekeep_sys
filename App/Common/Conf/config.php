@@ -40,7 +40,7 @@ return array (
 		'COOKIE_PREFIX' => 'odr',
 		
 		
-		'APP_GROUP_LIST' => 'Admin', // 项目分组设定
+		'APP_GROUP_LIST' => 'Admin,Common', // 项目分组设定
 //		'APP_GROUP_LIST' => 'Home,Admin', // 项目分组设定
         'DEFAULT_MODULE' => 'Admin'  , // 模版
 		'TMPL_ACTION_SUCCESS' => './App/Common/jump.html',

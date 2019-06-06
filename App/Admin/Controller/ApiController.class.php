@@ -5,9 +5,11 @@
  * Time: 10:10
  */
 
-namespace Common\Controller;
+namespace Admin\Controller;
 
-class ApiController extends CommonController
+
+use Think\Controller;
+class ApiController extends Controller
 {
 
     /*系统配置基本信息*/
@@ -17,7 +19,7 @@ class ApiController extends CommonController
         $config = $db->select();
         $arr = array();
         foreach ($config as $value){
-            $arr[$value['key']] =  $value[$value['value']];
+            $arr[$value['key']] =  $value['value'];
         }
 
         $data['status'] = 1;
@@ -230,4 +232,27 @@ class ApiController extends CommonController
             $this->ajaxReturn($data);
         }
     }
+    /*介绍操作*/
+    public function subRecommendData(){
+        $data = I('post.');
+        if($data){
+            $db = M('recommend_record');
+            $data['sub_time'] = time();
+            $res = $db->add($data);
+            if($res){
+                $data['status'] = 1;
+                $data['info'] = "提交成功";
+                $this->ajaxReturn($data);
+            }else{
+                $data['status'] = 0;
+                $data['info'] = "提交失败";
+                $this->ajaxReturn($data);
+            }
+        }else{
+            $data['status'] = 0;
+            $data['info'] = "提交失败";
+            $this->ajaxReturn($data);
+        }
+    }
+
 }

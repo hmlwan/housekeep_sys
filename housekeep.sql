@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-06-03 21:22:21
+Date: 2019-06-06 21:28:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,7 +32,7 @@ CREATE TABLE `blue_admin` (
 -- ----------------------------
 -- Records of blue_admin
 -- ----------------------------
-INSERT INTO `blue_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', null, '1,4,7,8,15,12,16,23,18,41,17,50,51,52,53,54,57,58,59,60,69,83,19,20,21,22', '0');
+INSERT INTO `blue_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', null, '1,4,7,8,15,12,16,23,18,41,17,50,51,52,53,54,57,58,59,60,69,19,89', '0');
 
 -- ----------------------------
 -- Table structure for `blue_apply_task`
@@ -3651,6 +3651,8 @@ DROP TABLE IF EXISTS `blue_job_type`;
 CREATE TABLE `blue_job_type` (
   `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
   `type_name` varchar(128) DEFAULT '' COMMENT ' --默认标题名称',
+  `introduce` varchar(200) DEFAULT NULL COMMENT '介绍',
+  `img` varchar(200) DEFAULT NULL COMMENT '图片',
   `status` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '--状态1：开启 0：关闭',
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
@@ -3660,11 +3662,11 @@ CREATE TABLE `blue_job_type` (
 -- ----------------------------
 -- Records of blue_job_type
 -- ----------------------------
-INSERT INTO `blue_job_type` VALUES ('1', '育婴师', '1', '1559382393', 'admin');
-INSERT INTO `blue_job_type` VALUES ('2', '月嫂', '1', '1559382393', 'admin');
-INSERT INTO `blue_job_type` VALUES ('4', '家庭早教师', '1', '1559382393', 'admin');
-INSERT INTO `blue_job_type` VALUES ('5', '菲佣', '1', '1559382393', 'admin');
-INSERT INTO `blue_job_type` VALUES ('6', '保姆', '1', '1559382393', 'admin');
+INSERT INTO `blue_job_type` VALUES ('1', '育婴师', '佳禾育婴 · 爱如己出', '/Uploads/Public/Uploads/2019-06-04/5cf5e702b78e2.jpg', '1', '1559619330', 'admin');
+INSERT INTO `blue_job_type` VALUES ('2', '月嫂', '佳禾月嫂 · 呵护您和您的未来', '/Uploads/Public/Uploads/2019-06-04/5cf5e71c1af2a.jpg', '1', '1559619356', 'admin');
+INSERT INTO `blue_job_type` VALUES ('4', '家庭早教师', '佳禾早教 · 成就孩子的未来', '/Uploads/Public/Uploads/2019-06-04/5cf5e6cc9e4f1.jpg', '1', '1559619276', 'admin');
+INSERT INTO `blue_job_type` VALUES ('5', '菲佣', '佳禾家政 · 还您自由好时光', '/Uploads/Public/Uploads/2019-06-04/5cf5e6ed7ea3f.jpg', '1', '1559619309', 'admin');
+INSERT INTO `blue_job_type` VALUES ('6', '保姆', '佳禾保姆 · 成就孩子的未来', '/Uploads/Public/Uploads/2019-06-04/5cf5e72925852.jpg', '1', '1559619369', 'admin');
 
 -- ----------------------------
 -- Table structure for `blue_join_train`
@@ -3835,6 +3837,29 @@ CREATE TABLE `blue_pub_task` (
 -- Records of blue_pub_task
 -- ----------------------------
 INSERT INTO `blue_pub_task` VALUES ('1', '烧饭保洁', '1-3年,3-5年', '住家', '上海', '烧饭保洁，搭手接送宝宝上下学', '勤快，可以跟老人相处', '6000-8000/26天（新手六千）', '佳禾婷婷老师', '上海市徐汇区徐虹北路3号2楼整层（老百姓大药房楼上）', '地铁3、4、9号线宜山路站下，4号线5号口出步行50米', '18516339538', '1', '1559382393', 'admin');
+
+-- ----------------------------
+-- Table structure for `blue_recommend_record`
+-- ----------------------------
+DROP TABLE IF EXISTS `blue_recommend_record`;
+CREATE TABLE `blue_recommend_record` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '--自增--',
+  `train_name` varchar(128) DEFAULT '' COMMENT '培训人姓名',
+  `train_phone` varchar(50) DEFAULT '' COMMENT '培训人号码',
+  `recommend_name` varchar(128) DEFAULT '' COMMENT '推荐人姓名',
+  `recommend_phone` varchar(50) DEFAULT '' COMMENT '推荐人号码',
+  `recommend_zfb` varchar(128) DEFAULT '' COMMENT '推荐人支付宝',
+  `recommend_wx` varchar(128) DEFAULT '' COMMENT '推荐人微信',
+  `recommend_bank` varchar(128) DEFAULT '' COMMENT '推荐人银行',
+  `type` tinyint(4) DEFAULT NULL COMMENT '类型 1：客户 2 学员',
+  `op_name` varchar(128) DEFAULT '' COMMENT '操作人',
+  `sub_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--提交时间--',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of blue_recommend_record
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `blue_special_service`
