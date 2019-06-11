@@ -52,7 +52,7 @@ class ConfigController extends AdminController {
             );
 
 	        if($sub_flag){ /*编辑*/
-                if(!$_FILES["sub_value_img"]["tmp_name"]){
+                if($type==2 && !$_FILES["sub_value_img"]["tmp_name"]){
                     unset($save_data['value']);
                 }
                 $res = M("config")->where(array('key'=>$en_name))->save($save_data);

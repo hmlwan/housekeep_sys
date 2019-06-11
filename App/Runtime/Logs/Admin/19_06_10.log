@@ -1,0 +1,1852 @@
+[ 2019-06-10T18:45:59+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002422s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0007s ]
+
+[ 2019-06-10T18:45:59+08:00 ] 127.0.0.1 /admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000353s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000413s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000999s ]
+
+[ 2019-06-10T18:46:01+08:00 ] 127.0.0.1 /admin/Login/checkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( username='admin' ) LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-06-10T18:46:01+08:00 ] 127.0.0.1 /admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0006s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000257s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+NOTIC: [8] Undefined variable: list /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 150 行.
+NOTIC: [8] Undefined variable: empty /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 167 行.
+NOTIC: [8] Undefined index: xnb /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 196 行.
+NOTIC: [8] Undefined index: xnb /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 198 行.
+NOTIC: [8] Use of undefined constant mysqlnd - assumed 'mysqlnd' /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 230 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034079s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001260s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001345s ]
+
+[ 2019-06-10T22:01:52+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:01:53+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0043s ]
+
+[ 2019-06-10T22:02:51+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002817s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:02:52+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:03:32+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001288s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0007s ]
+
+[ 2019-06-10T22:03:32+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:14:57+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0007s ]
+
+[ 2019-06-10T22:15:14+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001352s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:15:15+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0007s ]
+
+[ 2019-06-10T22:15:58+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:15:58+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:16:18+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001560s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:16:18+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002124s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:16:28+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:16:29+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2019-06-10T22:17:02+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001107s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0008s ]
+
+[ 2019-06-10T22:17:02+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:17:20+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000830s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:17:20+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:17:30+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:17:31+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:17:47+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001049s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:17:47+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2019-06-10T22:18:39+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001697s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:18:39+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0007s ]
+
+[ 2019-06-10T22:19:19+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001045s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0012s ]
+
+[ 2019-06-10T22:19:19+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0008s ]
+
+[ 2019-06-10T22:19:22+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:19:55+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:20:02+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001381s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:20:23+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001786s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:20:29+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003721s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:20:30+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2019-06-10T22:20:35+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2019-06-10T22:20:36+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2019-06-10T22:20:37+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004966s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0032s ]
+
+[ 2019-06-10T22:20:39+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002769s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2019-06-10T22:25:39+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:25:40+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T22:26:00+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000950s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T22:26:00+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:45:24+08:00 ] 127.0.0.1 /admin/Job/ayi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001373s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blue_jober` LIMIT 1   [ RunTime:0.0043s ]
+SQL: SELECT * FROM `blue_jober` ORDER BY id desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+NOTIC: [8] Undefined index: string /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/e6fa5b2a14004184d72a2fe3e8933769.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001223s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2019-06-10T23:45:28+08:00 ] 127.0.0.1 /admin/Job/ayi_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `blue_jober` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000261s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020939s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2019-06-10T23:49:05+08:00 ] 127.0.0.1 /admin/Job/ayi_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `blue_jober` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000265s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000834s ]
+
+[ 2019-06-10T23:49:15+08:00 ] 127.0.0.1 /admin/Job/ayi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blue_jober` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_jober` ORDER BY id desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined index: string /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/e6fa5b2a14004184d72a2fe3e8933769.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000569s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2019-06-10T23:49:17+08:00 ] 127.0.0.1 /admin/Job/ayi_add/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blue_jober` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000323s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000375s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2019-06-10T23:49:32+08:00 ] 127.0.0.1 /admin/Job/ayi_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: validate /Applications/MAMP/htdocs/project/housekeep_sys/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /Applications/MAMP/htdocs/project/housekeep_sys/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0021s ]
+SQL: SELECT `username` FROM `blue_admin` WHERE `admin_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `blue_jober` SET `id`='2',`type_id`='6',`name`='商阿姨',`birth`='1950年',`age`='48',`lang`='普通话/英语',`work_years`='3-5年',`edu`='大专',`area`='不限',`place`='浙江',`zodiac`='牛',`certificate`='身份证/健康证/母婴护理证/高级育婴证/早教证',`work_exp`='2015 上海 上海家庭 5口之家 1000平方 烧饭保洁
+2016 浙江 浙江家庭 4口之家 700平方 烧饭保洁
+2018 浙江 浙江家庭 3口之家 180平方 烧饭保洁',`work_skill`='做饭/保洁/熨烫/开车',`evaluate`='	阿姨为人随和，眼里有活，做事麻利，不斤斤计较，有亲和力，对待工作认真负责，肯吃苦耐劳，有爱心，会整理收纳规范整齐，勤勤恳恳，会做简单的家常菜，手艺好，口味好，懂些简单的营养搭配，能照料好雇主们的饮食起居，家里卫生也做的特别好，卫生打扫的很仔细，不敷衍了事，深受客户们的认可和信赖。',`status`='1',`op_time`='1560181772',`head_img`='/Uploads/Public/Uploads/2019-06-01/5cf25c4bf36f8.jpg',`life_img`='/Uploads/Public/Uploads/2019-06-01/5cf25c4c0a86c.jpg',`op_man`='admin' WHERE `id` = 2 [ RunTime:0.0154s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2019-06-10T23:49:34+08:00 ] 127.0.0.1 /admin/Job/ayi.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blue_jober` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_jober` ORDER BY id desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+NOTIC: [8] Undefined index: string /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/e6fa5b2a14004184d72a2fe3e8933769.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2019-06-10T23:49:36+08:00 ] 127.0.0.1 /admin/Job/ayi_add/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0002s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blue_jober` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000268s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2019-06-10T23:49:50+08:00 ] 127.0.0.1 /admin/Job/ayi_add/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_jober` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2019-06-10T23:49:56+08:00 ] 127.0.0.1 /admin/Job/ayi_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: validate /Applications/MAMP/htdocs/project/housekeep_sys/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /Applications/MAMP/htdocs/project/housekeep_sys/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0014s ]
+SQL: SELECT `username` FROM `blue_admin` WHERE `admin_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `blue_jober` SET `id`='1',`type_id`='2',`name`='李阿姨',`birth`='1951年',`age`='31',`lang`='普通话/英语',`work_years`='3-5年',`edu`='大专',`area`='不限',`place`='湖北',`zodiac`='虎',`certificate`='身份证/健康证/母婴护理证/高级育婴证/小儿推拿证',`work_exp`='2017-2018 上海 上海家庭 3口之家 145平方 月嫂
+2018-2018 上海 上海家庭 4口之家 150平方 专带9个月宝宝
+                       ',`work_skill`='新生儿/抚触被动操/月子餐/开车/推拿按摩',`evaluate`='儿童营养学，预姨防宝宝的一些阿人特别老实，有亲和力，接受过专业的高级育婴师培训 ，有专业的育儿知识和技能，懂得常见疾病的发生及护理，懂得学照料喂养宝宝，懂些宝宝的急救常识 ，擅长和宝宝互动，开发宝宝智力，建立宝宝的良好习惯 ，培养宝宝的独立性，从而使宝宝各方面得到最好的发展，经验丰富，深受客户们的一致好评。',`status`='1',`op_time`='1560181796',`head_img`='/Uploads/Public/Uploads/2019-06-01/5cf2569dd3d8f.jpg',`life_img`='/Uploads/Public/Uploads/2019-06-01/5cf2569ddb6ae.jpg',`op_man`='admin' WHERE `id` = 1 [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2019-06-10T23:49:57+08:00 ] 127.0.0.1 /admin/Job/ayi.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blue_jober` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_jober` ORDER BY id desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+NOTIC: [8] Undefined index: string /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/e6fa5b2a14004184d72a2fe3e8933769.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.034305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.036531s ]
+
+[ 2019-06-10T23:49:59+08:00 ] 127.0.0.1 /admin/Job/ayi_add/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_jober` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013903s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000956s ]
+
+[ 2019-06-10T23:50:01+08:00 ] 127.0.0.1 /admin/Job/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blue_job_type` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_job_type` ORDER BY type_id desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000468s ]
+NOTIC: [8] Undefined index: string /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/94116cc2234999e3d4623b94bbb745fe.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015415s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015471s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001664s ]
+
+[ 2019-06-10T23:50:05+08:00 ] 127.0.0.1 /admin/Job/job_add/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `type_id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001047s ]
+
+[ 2019-06-10T23:50:07+08:00 ] 127.0.0.1 /admin/Job/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blue_job_type` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_job_type` ORDER BY type_id desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000341s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000429s ]
+NOTIC: [8] Undefined index: string /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/94116cc2234999e3d4623b94bbb745fe.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000888s ]
+
+[ 2019-06-10T23:50:14+08:00 ] 127.0.0.1 /admin/Job/ayi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0007s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blue_jober` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_jober` ORDER BY id desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: task_id /Applications/MAMP/htdocs/project/housekeep_sys/App/Admin/Controller/JobController.class.php 第 106 行.
+SQL: SELECT `type_name` FROM `blue_job_type` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000368s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+NOTIC: [8] Undefined index: string /Applications/MAMP/htdocs/project/housekeep_sys/App/Runtime/Cache/Admin/e6fa5b2a14004184d72a2fe3e8933769.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2019-06-10T23:50:16+08:00 ] 127.0.0.1 /admin/Job/ayi_add/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash /Applications/MAMP/htdocs/project/housekeep_sys/App/Common/Common/function.php 第 614 行.
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `key`,`value` FROM `blue_config`  [ RunTime:0.0003s ]
+SQL: SELECT `Nav` FROM `blue_admin` WHERE ( admin_id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blue_nav` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=7 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=8 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=15 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=16 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=23 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=18 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=41 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=50 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=53 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=57 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=58 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=60 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=69 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=19 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blue_nav` WHERE ( nav_id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blue_jober` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015342s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2019-06-10T23:51:10+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:51:11+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001893s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0008s ]
+
+[ 2019-06-10T23:51:15+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:51:17+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001189s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2019-06-10T23:51:18+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001107s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T23:51:27+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:52:06+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001663s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:52:07+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001605s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:52:11+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_jober` WHERE `type_id` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:52:13+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_jober` WHERE `type_id` = 2 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2019-06-10T23:52:18+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blue_jober` WHERE `type_id` = 4 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2019-06-10T23:52:18+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001525s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blue_jober` WHERE `type_id` = 5 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:52:19+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blue_jober` WHERE `type_id` = 2 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2019-06-10T23:52:20+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002029s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blue_jober` WHERE `type_id` = 6 AND `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2019-06-10T23:52:20+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blue_jober` WHERE `type_id` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:52:28+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+
+[ 2019-06-10T23:52:28+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:53:14+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000838s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:53:14+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2019-06-10T23:54:48+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:54:48+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:54:54+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001778s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:54:55+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2019-06-10T23:55:09+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0006s ]
+
+[ 2019-06-10T23:55:09+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0008s ]
+
+[ 2019-06-10T23:55:28+08:00 ] 127.0.0.1 /admin/Api/getSysInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `blue_config` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `blue_config`  [ RunTime:0.0021s ]
+
+[ 2019-06-10T23:55:29+08:00 ] 127.0.0.1 /admin/Api/getAyiByJobType?type_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001432s ]
+SQL: SHOW COLUMNS FROM `blue_jober` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blue_jober` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blue_job_type` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `blue_job_type` WHERE `status` = 1  [ RunTime:0.0006s ]
+
