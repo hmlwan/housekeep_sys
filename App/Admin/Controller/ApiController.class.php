@@ -164,7 +164,7 @@ class ApiController extends Controller
         $name = I('get.name');
         $task_id = I('get.task_id');
         $db = M('apply_task');
-        $data = array(
+        $subdata = array(
             'phone' => $phone,
             'name' => $name,
             'task_id' => $task_id,
@@ -177,7 +177,37 @@ class ApiController extends Controller
             $this->ajaxReturn($data);
         }
 
-        $res = $db->add($data);
+        $res = $db->add($subdata);
+        if($res){
+            $data['status'] = 1;
+            $data['info'] = "提交成功";
+            $this->ajaxReturn($data);
+        }else{
+            $data['status'] = 0;
+            $data['info'] = "提交失败";
+            $this->ajaxReturn($data);
+        }
+    }
+	 /*添加会员*/
+    public function  saveMember(){
+        $username = I('get.username');
+        $nick = I('get.nick');
+        $open_id = I('get.openid');
+        $db = M('member');
+        $subdata = array(
+            'username' => json_encode($username),
+            'nick' => json_encode($nick),
+            'reg_time' => time(),
+            'open_id' => $open_id,
+            'ip' => $_SERVER['REMOTE_ADDR'],
+        );
+        $is_exist = $db->where(array('open_id'=>$open_id))->find();
+        if($is_exist){
+			 
+             $res = $db->where(array('open_id'=>$open_id))->save(array('login_time'=>time()));
+        }else{
+			$res = $db->add($subdata);
+		}
         if($res){
             $data['status'] = 1;
             $data['info'] = "提交成功";
@@ -195,7 +225,7 @@ class ApiController extends Controller
         $name = I('get.name');
         $jober_id = I('get.jober_id');
         $db = M('order_ayi');
-        $data = array(
+        $subdata = array(
             'phone' => $phone,
             'name' => $name,
             'jober_id' => $jober_id,
@@ -208,7 +238,7 @@ class ApiController extends Controller
             $this->ajaxReturn($data);
         }
 
-        $res = $db->add($data);
+        $res = $db->add($subdata);
         if($res){
             $data['status'] = 1;
             $data['info'] = "提交成功";
@@ -225,7 +255,7 @@ class ApiController extends Controller
         $name = I('get.name');
         $courses = I('get.courses');
         $db = M('join_train');
-        $data = array(
+        $subdata = array(
             'phone' => $phone,
             'name' => $name,
             'courses' => $courses,
@@ -238,7 +268,7 @@ class ApiController extends Controller
             $this->ajaxReturn($data);
         }
 
-        $res = $db->add($data);
+        $res = $db->add($subdata);
         if($res){
             $data['status'] = 1;
             $data['info'] = "提交成功";
