@@ -40,16 +40,16 @@ class MemberController extends AdminController {
 
         $show       = $Page->show();// 分页显示输出
         $list =  M('Member')->alias('m')
-            ->field('m.*,i.stars,i.commision')
+            ->field('m.*')
             ->join('LEFT JOIN blue_member_info as i on i.member_id=m.member_id')
             ->where($where)
             ->order("m.member_id desc ")
             ->limit($Page->firstRow.','.$Page->listRows)->select();
-        foreach ($list as $key =>$value){
-            $qd_fg_num = M('member_fg')->where(array('member_id','type'=>1))->sum('fg_num');
-            $fk_fg_num = M('member_fg')->where(array('member_id','type'=>2))->sum('fg_num');
-            $list[$key]['qd_fg_num'] = $qd_fg_num? $qd_fg_num :0;
-            $list[$key]['fk_fg_num'] = $fk_fg_num ? $fk_fg_num :0;
+
+
+        foreach ($list as &$val){
+            $val["username"] = json_decode($val['username'],true);
+            $val["nick"] = json_decode($val['nick'],true);
         }
 
         $this->assign('list',$list);// 赋值数据集

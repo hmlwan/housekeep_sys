@@ -25,7 +25,7 @@
 
             <div class="result-title">
                 <div class="result-list">
-                    <a href="{:U('Member/addMember')}"><i class="icon-font"></i>新增会员</a>
+                    <!--<a href="{:U('Member/addMember')}"><i class="icon-font"></i>新增会员</a>-->
                 </div>
             </div>
             <div class="result-content">
@@ -33,60 +33,37 @@
                     <tr>
                         <th>ID</th>
                         <th>用户名</th>
-						<th>推荐人</th>
-                        <th>手机号</th>
-                        <th>佣金</th>
-                        <th>是否为优先匹配者</th>
-                        <th>星星数</th>
-                        <th>抢单复购次数</th>
-                        <th>收款复购次数</th>
-						<th>注册时间</th>
-                        <th>登录状态</th>
-                        <th>操作</th>
+						<th>昵称</th>
+                        <th>ip</th>
+                        <th>注册时间</th>
+                        <th>最近登录时间</th>
+                        <th>openId</th>
+
+                        <!--<th>操作</th>-->
                     </tr>
                     <volist name='list' id='vo'>
                         <tr>
                             <td>{$vo['member_id']}</td>
                             <td>{$vo['username']}</td>
-							<td>{$vo['pid']}</td>
-                            <td>{$vo['phone']}</td>
-                            <td>{$vo['commision']}</td>
-                            <td>
-                                <if condition="$vo['is_priority'] eq 0">
-                                    否
-                                </if>
-                                <if condition="$vo['is_priority'] eq 1">
-                                    是
-                                </if>
-                            </td>
-                            <td>{$vo['stars']}</td>
-                            <td>{$vo['qd_fg_num']}</td>
-                            <td>{$vo['fk_fg_num']}</td>
-							<td>{$vo['reg_time']|date='Y-m-d H:i:s',###}</td>
-                            <td><if condition="$vo['is_lock'] eq 0">
-									正常
-								</if>
-								<if condition="$vo['is_lock'] eq 1">
-									禁用
-								</if>
+							<td>{$vo['nick']}</td>
+                            <td>{$vo['ip']}</td>
+                            <td>{$vo['reg_time']|date='Y-m-d H:i:s',###}</td>
+                            <td>{$vo['login_time']|date='Y-m-d H:i:s',###}</td>
+                            <td>{$vo['open_id']}</td>
 
-							</td>
-                            <td>
-                                <!--<a class="link-del" href="{:U('Finance/index',array('member_id'=>$vo['member_id']))}">查看财务日志</a>-->
+                            <!--<td>-->
+                                <!--<a class="link-update" href="{:U('Member/saveMember',array('member_id'=>$vo['member_id']))}">修改|</a>-->
+                                <!--<a class="link-update" href="{:U('Member/become_priority',array('member_id'=>$vo['member_id']))}" onclick="return confirm('确认成为优先匹配者吗？')">成为优先匹配者|</a>-->
+                                <!--<a class="link-del" href="{:U('Member/delMember',array('member_id'=>$vo['member_id']))}" onclick="return confirm('确认删除吗？')">删除|</a>-->
+                                <!--<if condition="$vo['is_lock'] eq 0">-->
+                                    <!--<a class="link-lock" href="{:U('Member/lockMember',array('member_id'=>$vo['member_id'],'is_lock'=>1))}"  onclick="return confirm('确认禁用吗？')">禁用</a>-->
+                                <!--</if>-->
+                                <!--<if condition="$vo['is_lock'] eq 1">-->
+                                    <!--<a class="link-lock" href="{:U('Member/lockMember',array('member_id'=>$vo['member_id'],'is_lock'=>0))}"  onclick="return confirm('确认解封吗？')">解封</a>-->
+                                <!--</if>-->
                                 <!--<br>-->
-                                <a class="link-del" href="{:U('Member/show_my_invit',array('member_id'=>$vo['member_id']))}">查看邀请人员</a><br>
-                                <a class="link-update" href="{:U('Member/saveMember',array('member_id'=>$vo['member_id']))}">修改|</a>
-                                <a class="link-update" href="{:U('Member/become_priority',array('member_id'=>$vo['member_id']))}" onclick="return confirm('确认成为优先匹配者吗？')">成为优先匹配者|</a>
-                                <a class="link-del" href="{:U('Member/delMember',array('member_id'=>$vo['member_id']))}" onclick="return confirm('确认删除吗？')">删除|</a>
-                                <if condition="$vo['is_lock'] eq 0">
-                                    <a class="link-lock" href="{:U('Member/lockMember',array('member_id'=>$vo['member_id'],'is_lock'=>1))}"  onclick="return confirm('确认禁用吗？')">禁用</a>
-                                </if>
-                                <if condition="$vo['is_lock'] eq 1">
-                                    <a class="link-lock" href="{:U('Member/lockMember',array('member_id'=>$vo['member_id'],'is_lock'=>0))}"  onclick="return confirm('确认解封吗？')">解封</a>
-                                </if>
-                                <br>
-                                <a class="link-update" href="{:U('Member/show',array('member_id'=>$vo['member_id']))}">查看会员信息</a><br>
-                            </td>
+                                <!--<a class="link-update" href="{:U('Member/show',array('member_id'=>$vo['member_id']))}">查看会员信息</a><br>-->
+                            <!--</td>-->
                         </tr>
                     </volist>
 

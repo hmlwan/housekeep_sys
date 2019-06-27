@@ -34,6 +34,11 @@ class RecordController extends AdminController {
             ->order ("id desc" )
             ->limit ( $Page->firstRow . ',' . $Page->listRows )
             ->select ();
+        foreach ($info as &$value){
+            $jober_list = M("jober")->where(array('id'=>array('in',trim($value['jober_id']))))->getField('name',true);
+            $jober_name = implode(',',$jober_list);
+            $value["jober_name"] = $jober_name;
+        }
 
         $this->assign ('info', $info ); // 赋值数据集
         $this->assign ('page', $show ); // 赋值分页输出
@@ -65,6 +70,11 @@ class RecordController extends AdminController {
             ->order ("id desc" )
             ->limit ( $Page->firstRow . ',' . $Page->listRows )
             ->select ();
+        foreach ($info as &$value){
+            $course_list = M("train_course")->where(array('id'=>array('in',trim($value['courses']))))->getField('course_name',true);
+            $courses_name = implode(',',$course_list);
+            $value["courses_name"] = $courses_name;
+        }
 
         $this->assign ('info', $info ); // 赋值数据集
         $this->assign ('page', $show ); // 赋值分页输出
