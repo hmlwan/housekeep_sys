@@ -12,6 +12,8 @@ use Think\Controller;
 class ApiController extends Controller
 {
 
+
+
     /*系统配置基本信息*/
     public function getSysInfo(){
 
@@ -303,6 +305,36 @@ class ApiController extends Controller
             $data['info'] = "提交失败";
             $this->ajaxReturn($data);
         }
+    }
+    /*获取微信api*/
+    public function getWxOpenId(){
+        $code = I('get.code');
+        $db = M('config');
+        $config = $db->select();
+        $arr = array();
+        foreach ($config as $value){
+            $arr[$value['key']] =  $value['value'];
+        }
+
+        $APPID = $arr['app_id'];
+        $SECRET = $arr['app_secret'];
+        $url = "https://api.weixin.qq.com/sns/jscode2session?appid={$APPID}&secret={$SECRET}&js_code={$code}&grant_type=authorization_code";
+
+        $header = array(
+            'content-type'=> 'application/json'
+        );
+        $result = get_contents($url,$header);
+        $rsp = json_decode($result,true);
+        if($rsp['openid']){
+            $data['status'] = 1;
+            $data['info'] = "成功";
+            $data['data'] = $rsp['openid'];
+        }else{
+            $data['status'] = 0;
+            $data['info'] = "失败";
+        }
+
+        $this->ajaxReturn($data);
     }
 
 }

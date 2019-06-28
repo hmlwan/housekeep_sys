@@ -18,86 +18,40 @@
     <favorites_list name="xiao" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46119308">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/App/Admin/View/Member/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="588">
-                  <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="left.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/App/Admin/View/Public/left.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RecordController.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="467">
-                  <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="order_ayi.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/App/Admin/View/Record/order_ayi.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MemberController.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/App/Admin/Controller/MemberController.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="join_train.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/App/Admin/View/Record/join_train.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="46" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MemberController.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/App/Admin/Controller/MemberController.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="174">
-                  <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ApiController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="326" column="35" lean-forward="false" selection-start-line="326" selection-start-column="35" selection-end-line="326" selection-end-column="35" />
+              <folding>
+                <element signature="e#6#70#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/Common/function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateCofig.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="35" column="75" lean-forward="false" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -114,11 +68,9 @@
         <option value="$PROJECT_DIR$/App/Admin/Controller/ConfigController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/TrainController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Train/course_add.html" />
-        <option value="$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php" />
         <option value="$PROJECT_DIR$/11.txt" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/LoginController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Login/index.html" />
-        <option value="$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Index/index.html" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/MemberController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Member/index.html" />
@@ -126,6 +78,9 @@
         <option value="$PROJECT_DIR$/App/Admin/View/Record/join_train.html" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Record/order_ayi.html" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html" />
+        <option value="$PROJECT_DIR$/App/Admin/Common/function.php" />
+        <option value="$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php" />
       </list>
     </option>
   </component>
@@ -268,7 +223,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Record" />
+              <option name="myItemId" value="Config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,6 +246,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="housekeep_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="housekeep_sys" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,12 +374,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561537013895</updated>
       <workItem from="1561537015725" duration="3904000" />
-      <workItem from="1561621638015" duration="2480000" />
+      <workItem from="1561621638015" duration="7578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20945000" />
+    <option name="totallyTimeSpent" value="26043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -485,7 +462,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php</url>
-          <line>229</line>
+          <line>231</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -514,13 +491,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/ayi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="70" lean-forward="false" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/pub_task.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -651,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdminController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Controller/JobController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -739,16 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-          <folding>
-            <element signature="e#6#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/11.txt" />
     <entry file="file://$PROJECT_DIR$/App/Admin/Controller/LoginController.class.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -783,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="39" column="181" lean-forward="false" selection-start-line="39" selection-start-column="181" selection-end-line="39" selection-end-column="181" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -820,26 +766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Member/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Public/left.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -854,9 +784,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Record/order_ayi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+        <state relative-caret-position="609">
+          <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Member/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdminController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="35" column="75" lean-forward="false" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="326" column="35" lean-forward="false" selection-start-line="326" selection-start-column="35" selection-end-line="326" selection-end-column="35" />
+          <folding>
+            <element signature="e#6#70#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
