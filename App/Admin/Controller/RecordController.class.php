@@ -104,6 +104,9 @@ class RecordController extends AdminController {
             ->order ("id desc" )
             ->limit ( $Page->firstRow . ',' . $Page->listRows )
             ->select ();
+        foreach ($info as &$value){
+            $value["task_name"] =  M("pub_task")->where(array('id'=>$value['task_id']))->getField('title');
+        }
 
         $this->assign ('info', $info ); // 赋值数据集
         $this->assign ('page', $show ); // 赋值分页输出
