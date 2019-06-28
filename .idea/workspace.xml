@@ -18,40 +18,40 @@
     <favorites_list name="xiao" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApiController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="326" column="35" lean-forward="false" selection-start-line="326" selection-start-column="35" selection-end-line="326" selection-end-column="35" />
-              <folding>
-                <element signature="e#6#70#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/Common/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateCofig.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="35" column="75" lean-forward="false" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="recommend.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/App/Admin/View/Record/recommend.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="RecordController.class.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="587">
+                  <caret line="139" column="27" lean-forward="false" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
+                  <folding>
+                    <element signature="e#289#1396#0#PHP" expanded="false" />
+                    <element signature="e#1415#2545#0#PHP" expanded="false" />
+                    <element signature="e#2564#3408#0#PHP" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -76,11 +76,12 @@
         <option value="$PROJECT_DIR$/App/Admin/View/Member/index.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Public/left.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Record/join_train.html" />
-        <option value="$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Record/order_ayi.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html" />
         <option value="$PROJECT_DIR$/App/Admin/Common/function.php" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php" />
+        <option value="$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Record/recommend.html" />
       </list>
     </option>
   </component>
@@ -197,77 +198,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housekeep_sys" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,6 +209,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WWW\housekeep_sys\App\Admin\View\Record" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -374,12 +310,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561537013895</updated>
       <workItem from="1561537015725" duration="3904000" />
-      <workItem from="1561621638015" duration="7578000" />
+      <workItem from="1561621638015" duration="8370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26043000" />
+    <option name="totallyTimeSpent" value="26835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -491,13 +427,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/pub_task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Job/pub_task_add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -790,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Member/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -814,11 +735,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html">
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="35" column="75" lean-forward="false" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
-          <folding />
+        <state relative-caret-position="467">
+          <caret line="313" column="23" lean-forward="true" selection-start-line="313" selection-start-column="23" selection-end-line="313" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#70#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -830,13 +753,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/ApiController.class.php">
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Config/updateCofig.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="326" column="35" lean-forward="false" selection-start-line="326" selection-start-column="35" selection-end-line="326" selection-end-column="35" />
+        <state relative-caret-position="294">
+          <caret line="35" column="75" lean-forward="false" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="139" column="27" lean-forward="false" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
           <folding>
-            <element signature="e#6#70#0#PHP" expanded="true" />
+            <element signature="e#289#1396#0#PHP" expanded="false" />
+            <element signature="e#1415#2545#0#PHP" expanded="false" />
+            <element signature="e#2564#3408#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Record/recommend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
