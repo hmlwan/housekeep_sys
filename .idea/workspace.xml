@@ -24,7 +24,7 @@
           <file leaf-file-name="apply_task.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/App/Admin/View/Record/apply_task.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="642">
+                <state relative-caret-position="411">
                   <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="43" />
                   <folding />
                 </state>
@@ -48,8 +48,8 @@
           <file leaf-file-name="RecordController.class.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="400">
-                  <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+                <state relative-caret-position="-356">
+                  <caret line="94" column="33" lean-forward="true" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
                   <folding>
                     <element signature="e#289#1396#0#PHP" expanded="false" />
                     <element signature="e#1415#2545#0#PHP" expanded="false" />
@@ -394,12 +394,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561537013895</updated>
       <workItem from="1561537015725" duration="3904000" />
-      <workItem from="1561621638015" duration="8883000" />
+      <workItem from="1561621638015" duration="10692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27348000" />
+    <option name="totallyTimeSpent" value="29157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -848,7 +848,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Record/apply_task.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
+        <state relative-caret-position="411">
           <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="43" />
           <folding />
         </state>
@@ -856,8 +856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Controller/RecordController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        <state relative-caret-position="-356">
+          <caret line="94" column="33" lean-forward="true" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
           <folding>
             <element signature="e#289#1396#0#PHP" expanded="false" />
             <element signature="e#1415#2545#0#PHP" expanded="false" />
