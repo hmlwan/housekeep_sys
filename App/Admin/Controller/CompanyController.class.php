@@ -224,7 +224,7 @@ class CompanyController extends AdminController {
     }
 
     public function del(){
-
+		
         if(empty($_POST['id'])){
             $info['status'] = -1;
             $info['info'] ='传入参数有误';
@@ -232,7 +232,7 @@ class CompanyController extends AdminController {
         }
 
         $id = I('post.id','','intval');
-        $model = I('post.model','','intval');
+        $model = I('post.model');
         $r = M($model)->delete($id);
 
         if(!$r){

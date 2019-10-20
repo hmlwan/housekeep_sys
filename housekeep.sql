@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-06-27 17:17:52
+Date: 2019-10-20 19:37:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,7 +32,7 @@ CREATE TABLE `blue_admin` (
 -- ----------------------------
 -- Records of blue_admin
 -- ----------------------------
-INSERT INTO `blue_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', null, '1,4,7,8,15,12,16,23,18,41,17,50,51,52,53,54,57,58,59,60,69,19,89', '0');
+INSERT INTO `blue_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', null, '1,4,7,90,15,12,16,23,18,41,17,50,51,52,53,54,57,58,59,60,69,19,89', '0');
 
 -- ----------------------------
 -- Table structure for `blue_apply_task`
@@ -3601,10 +3601,12 @@ CREATE TABLE `blue_config` (
 -- ----------------------------
 -- Records of blue_config
 -- ----------------------------
-INSERT INTO `blue_config` VALUES ('web_title', '佳禾家政', '1', '网站标题');
+INSERT INTO `blue_config` VALUES ('web_title', '伯乐家政', '1', '网站标题');
 INSERT INTO `blue_config` VALUES ('web_keywords', '家政，服务，保姆', '1', '网站关键字');
 INSERT INTO `blue_config` VALUES ('web_desc', '家政，服务类平台', '1', '网站描述');
-INSERT INTO `blue_config` VALUES ('web_logo', '/Uploads/Public/Uploads/2019-06-11/5cff98b6abfc3.png', '2', '网站LOGO');
+INSERT INTO `blue_config` VALUES ('app_id', 'wxfac178567fcd21ee', '1', '微信AppId');
+INSERT INTO `blue_config` VALUES ('app_secret', '89a6daffd13c04b6cc6840b7163cf8e6', '1', '微信AppSecret');
+INSERT INTO `blue_config` VALUES ('web_logo', '/Uploads/Public/Uploads/2019-10-20/5dac40578d3d4.jpg', '2', '网站LOGO');
 INSERT INTO `blue_config` VALUES ('copyright', 'Copyright © 上海伯乐家政服务有限公司 版权所有  沪ICP备18042564号-2', '1', '版权信息');
 INSERT INTO `blue_config` VALUES ('record', '上海伯乐家政服务有限公司', '1', '备案信息');
 INSERT INTO `blue_config` VALUES ('tel', '400-808-3353', '1', '官方电话');
@@ -3614,10 +3616,10 @@ INSERT INTO `blue_config` VALUES ('web_name', '佳禾国际家政', '1', '网站
 INSERT INTO `blue_config` VALUES ('company_address', '上海市徐汇区徐虹北路3号2楼', '1', '公司地址');
 INSERT INTO `blue_config` VALUES ('qq', '', '1', 'QQ');
 INSERT INTO `blue_config` VALUES ('technical_support', 'hmlwan(824398038)', '1', '技术支持');
-INSERT INTO `blue_config` VALUES ('company_qrcode', '/Uploads/Public/Uploads/2019-06-11/5cff95d6c85dc.jpg', '2', '网站二维码');
-INSERT INTO `blue_config` VALUES ('main_jiahe_img', '/Uploads/Public/Uploads/2019-06-11/5cffbef91bd6d.jpg', '2', '首页佳禾服务');
-INSERT INTO `blue_config` VALUES ('main_logo', '/Uploads/Public/Uploads/2019-06-11/5cffbfae4fdec.png', '2', '首页logo');
-INSERT INTO `blue_config` VALUES ('intro_student_img', '/Uploads/Public/Uploads/2019-06-13/5d0253c1f3462.png', '2', '推荐学员logo');
+INSERT INTO `blue_config` VALUES ('company_qrcode', '/Uploads/Public/Uploads/2019-10-20/5dac43d9ccf5c.jpg', '2', '网站二维码');
+INSERT INTO `blue_config` VALUES ('main_jiahe_img', '/Uploads/Public/Uploads/2019-10-20/5dac0dbe1df87.png', '2', '首页佳禾服务');
+INSERT INTO `blue_config` VALUES ('find_ayi_img', '/Uploads/Public/Uploads/2019-10-20/5dac45a1db1ec.png', '2', '找阿姨头图');
+INSERT INTO `blue_config` VALUES ('intro_student_img', '/Uploads/Public/Uploads/2019-10-20/5dac40c0cf284.jpg', '2', '推荐学员logo');
 INSERT INTO `blue_config` VALUES ('intro_client_img', '/Uploads/Public/Uploads/2019-06-13/5d0253fd55ba0.jpg', '2', '推荐客户logo');
 INSERT INTO `blue_config` VALUES ('train_bkg_img', '/Uploads/Public/Uploads/2019-06-13/5d025862bddc4.png', '2', '培训页面logo');
 INSERT INTO `blue_config` VALUES ('scroll_img_1', '/Uploads/Public/Uploads/2019-06-13/5d0259abcd763.jpg', '2', '返回首页轮播图1');
@@ -3725,13 +3727,12 @@ CREATE TABLE `blue_member` (
   `open_id` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`member_id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_member
 -- ----------------------------
-INSERT INTO `blue_member` VALUES ('7', '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', null, null, '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', null, null, '127.0.0.1', '1560431242', null, '1560431300', '0.00000000', '0.00000000', '0', '0', 'undefined');
-INSERT INTO `blue_member` VALUES ('8', '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', null, null, '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', null, null, '127.0.0.1', '1560431393', null, '1561536540', '0.00000000', '0.00000000', '0', '0', 'o7A4s5H5bSjUtgqNTDsO6BXivLVg');
+INSERT INTO `blue_member` VALUES ('1', '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', null, null, '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', null, null, '127.0.0.1', '1561691613', null, '1571569911', '0.00000000', '0.00000000', '0', '0', 'o7A4s5H5bSjUtgqNTDsO6BXivLVg');
 
 -- ----------------------------
 -- Table structure for `blue_member_info`
@@ -3765,9 +3766,6 @@ CREATE TABLE `blue_member_info` (
 -- ----------------------------
 -- Records of blue_member_info
 -- ----------------------------
-INSERT INTO `blue_member_info` VALUES ('1', '1', '0.00', '3', '200.00', '1', null, '0', '/Uploads/Public/Uploads/2019-03-16/5c8cbf75022a0.jpg', '/Uploads/Public/Uploads/2019-03-28/5c9c3053f2037.jpg', '/Uploads/Public/Uploads/2019-03-16/5c8cbf7e3819a.jpg', '3', '3', '0', '1', '0', null, '1558086246', null, null, null);
-INSERT INTO `blue_member_info` VALUES ('2', '3', '20.00', '3', '0.00', '1', '0.00', '0', '/Uploads/Public/Uploads/2019-03-17/5c8de77359b22.jpg', '/Uploads/Public/Uploads/2019-03-17/5c8de7830d6b3.jpg', '/Uploads/Public/Uploads/2019-03-17/5c8de77aa31dc.jpg', '3', '3', '0', '1', '0', null, '1558086266', null, null, null);
-INSERT INTO `blue_member_info` VALUES ('4', '5', '50.00', '3', '200.00', '1', '0.00', '0', '/Uploads/Public/Uploads/2019-05-13/5cd96180d7cbe.jpg', '/Uploads/Public/Uploads/2019-05-13/5cd96199577ce.jpg', '/Uploads/Public/Uploads/2019-05-13/5cd96190a5a52.jpg', '3', '3', '0', '0', '0', null, '1557803864', '0', '0', '0.00');
 
 -- ----------------------------
 -- Table structure for `blue_nav`
@@ -3780,7 +3778,7 @@ CREATE TABLE `blue_nav` (
   `nav_url` varchar(64) NOT NULL COMMENT 'url路径',
   `cat_id` varchar(32) NOT NULL COMMENT '类别',
   PRIMARY KEY (`nav_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=90 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=91 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_nav
@@ -3788,6 +3786,7 @@ CREATE TABLE `blue_nav` (
 INSERT INTO `blue_nav` VALUES ('1', '系统配置', '&#xe642;', '/Config/index', 'sys');
 INSERT INTO `blue_nav` VALUES ('4', '官方公告管理', '&#xe6f7;', '/Art/index/article_category_id/1', 'article');
 INSERT INTO `blue_nav` VALUES ('7', '会员列表', '&#x3434;', '/Member/index', 'user');
+INSERT INTO `blue_nav` VALUES ('90', '推荐记录', '&#xe6f7;', '/Record/recommend', 'record');
 INSERT INTO `blue_nav` VALUES ('15', '工作类型管理', '&#xe6f7;', '/Job/index', 'job');
 INSERT INTO `blue_nav` VALUES ('12', '阿姨管理', '&#xe6f7;', '/Job/ayi', 'job');
 INSERT INTO `blue_nav` VALUES ('16', '师资管理', '&#xe6f7;', '/Train/teacher', 'train');
@@ -3879,8 +3878,6 @@ CREATE TABLE `blue_recommend_record` (
 -- ----------------------------
 -- Records of blue_recommend_record
 -- ----------------------------
-INSERT INTO `blue_recommend_record` VALUES ('15', '1', '2', '3', '4', '6', '5', '7', '2', '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', '1560063035', 'o7A4s5H5bSjUtgqNTDsO6BXivLVg');
-INSERT INTO `blue_recommend_record` VALUES ('16', '1', '2', '3', '4', '6', '5', '7', '1', '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', '1560064730', 'undefined');
 INSERT INTO `blue_recommend_record` VALUES ('17', '1', '2', '3', '4', '6', '5', '7', '1', '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', '1560064741', 'o7A4s5H5bSjUtgqNTDsO6BXivLVg');
 INSERT INTO `blue_recommend_record` VALUES ('18', '2', '3', '4', '5', '7', '6', '8', '2', '\"\\ud83d\\ude02\\ud83d\\udcaa\\ud83d\\udc4d\\u96ea\\u4e2d\\u884c\\u8005\"', '1560264580', 'o7A4s5H5bSjUtgqNTDsO6BXivLVg');
 
@@ -3894,15 +3891,14 @@ CREATE TABLE `blue_special_service` (
   `img` varchar(2048) NOT NULL DEFAULT '' COMMENT '图片',
   `op_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '--操作人--',
   `op_man` varchar(64) NOT NULL DEFAULT '' COMMENT '--操作时间--',
+  `status` tinyint(4) DEFAULT NULL COMMENT '状态1：开启 0，关闭',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of blue_special_service
 -- ----------------------------
-INSERT INTO `blue_special_service` VALUES ('1', '起居照顾', '/Uploads/Public/Uploads/2019-06-03/5cf5192e250bc.png', '1559566638', 'admin');
-INSERT INTO `blue_special_service` VALUES ('2', '常见疾病预防', '/Uploads/Public/Uploads/2019-06-03/5cf519514a664.jpg', '1559566673', 'admin');
-INSERT INTO `blue_special_service` VALUES ('3', '科学喂养', '/Uploads/Public/Uploads/2019-06-03/5cf519609171c.jpg', '1559566688', 'admin');
+INSERT INTO `blue_special_service` VALUES ('3', '科学喂养', '/Uploads/Public/Uploads/2019-10-20/5dac3c972e158.png', '1571568791', 'admin', '1');
 
 -- ----------------------------
 -- Table structure for `blue_sub_company`

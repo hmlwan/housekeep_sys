@@ -56,139 +56,8 @@ class MemberController extends AdminController {
         $this->assign('page',$show);// 赋值分页输出
         $this->display(); // 输出模板
     }
-    /**
-     * 审核列表
-     */
-    public function auth_list(){
 
-        $member_id = I('member_id');
 
-        if(!empty($member_id)){
-            $where['username'] = array('like','%'.$member_id.'%');
-        }
-        if (!empty($username)){
-            $where['username']=$member_id;
-        }
-        $model = M('deposit_auth');
-        $count      =  $model->where($where)->count();// 查询满足要求的总记录数
-
-    	$Page       = new Page($count,20);// 实例化分页类 传入总记录数和每页显示的记录数(25)
-    
-    	//给分页传参数
-    	//setPageParameter($Page, array('email'=>$email,'member_id'=>$member_id));
-    
-    	$show       = $Page->show();// 分页显示输出
-    
-    	$list =  $model->alias('a')
-            -> field('a.*, b.username,b.phone')
-            ->join('__MEMBER__ b on a.member_id=b.member_id')
-            ->where($where)
-            ->order(" a.status asc, a.id desc ")
-            ->limit($Page->firstRow.','.$Page->listRows)->select();
-
-    	$this->assign('list',$list);// 赋值数据集
-    	$this->assign('page',$show);// 赋值分页输出
-    	$this->display(); // 输出模板
-    }
-    public function auth_do(){
-
-    	if(IS_GET){
-    		$id = I('get.id');
-    		$status = I('get.status');
-    		$model = M('deposit_auth');
-    		$res = $model->where(array('id'=>$id))->find();
-    		if(empty($res)){
-    			$this->error('参数错误！');
-    		}
-    		$save_data = array(
-                'status' =>$status,
-                'op_time' => time(),
-                'op_man' => $_SESSION['admin_userid']
-            );
-            $rs = $model
-                ->where(array('id'=>$id))
-                ->save($save_data);
-
-            if($rs !== false){
-                $this->success('操作成功！', U('auth_list'));exit;
-            }else{
-                $this->error('操作失败');
-            }
-    	}
-    }
-    /*匹配优先匹配者*/
-    public function add_member_priority(){
-        $model = M('deposit_auth');
-        if(IS_POST){
-            $sk_id = I('sk_id');
-            $fk_id = I('fk_id');
-            $pay_money = I('pay_money');
-            if($_FILES["img"]["tmp_name"]){
-                $_POST['img']=$this->upload($_FILES["img"]);
-                if (!$_POST['img']){
-                    $this->error('请上传凭证');
-                }
-            }
-            if(!$sk_id || !$fk_id){
-                $this->error('未知错误');
-            }
-            $d_res = $model->where(array('member_id'=>$fk_id))->save(array('status'=>1));
-
-            if($d_res){
-                /*更新用户信息表*/
-                M('member_info')->where(array('member_id'=>$fk_id))
-                    ->save(array(
-                        'is_pay_deposit' =>1,
-                        'deposit' => $this->config['dk_money'],
-                        'is_other_receive_payable' => 0,
-                        'op_time' => time(),
-                        'op_man' => $_SESSION['admin_userid'],
-                    ));
-                $pro_data = array(
-                    'fk_id' => $fk_id,
-                    'sk_id' => $sk_id,
-                    'task_id' => 0,
-                    'reward' => $pay_money,
-                    'fg_num' => 0,
-                    'status' => 0,
-                    'create_time' => time(),
-                );
-                 M("qd_record")->add($pro_data);
-                $this->success('提交成功', U('auth_list'));
-            }else{
-                $this->error('提交失败');
-            }
-        }else{
-            $id = I('id');
-            $res = $model->where(array('id'=>$id))->find();
-            /*系统自动匹配收款方*/
-            $sk_info = M('member')->alias('m')
-                ->join('LEFT JOIN blue_member_info as i on i.member_id=m.member_id')
-                ->where(array("m.member_id"=>array('neq',$res['member_id']),'is_priority'=>1))
-                ->order('rand()')
-                ->limit(1)
-                ->select();
-            if(!$sk_info){
-                $model
-                    ->where(array('id'=>$id))
-                    ->save(array('status'=>2));
-                M('member_info')
-                    ->where(array('member_id'=>$res['member_id']))
-                    ->save(array(
-                        'deposit' => $res['pay_money'],
-                        'is_pay_deposit' => 0,
-                    ));
-                $this->error("未找到优先匹配者，请检查");
-            }
-            $info = $sk_info[0];
-            $info['fk_id'] = $res['member_id'];
-            $info['img'] = $res['img'];
-
-            $this->assign('info',$info);
-            $this->display();
-
-        }
-    }
 
     /**
      * 添加会员
@@ -258,34 +127,6 @@ class MemberController extends AdminController {
             $this->assign('list',$list);
             $this->display();
         }
-    }
-    /**
-     * 显示自己推荐列表
-     */
-    public function show_my_invit(){
-        $member_id = $_GET['member_id'];
-        if(empty($member_id)){
-            $this->error('参数错误');
-            return;
-        }
-        $M_member = M('Member');
-        $count   = $M_member->alias('m')
-            ->join("LEFT JOIN blue_member_info i on i.member_id=m.member_id")
-            ->where(array('m.pid'=>$member_id))
-            ->count();// 查询满足要求的总记录数
-        $Page       = new Page($count,25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
-        $show       = $Page->show();// 分页显示输出
-        // 进行分页数据查询 注意limit方法的参数要使用Page类的属性
-        $my_invit = $M_member->alias('m')
-            ->join("LEFT JOIN blue_member_info i on i.member_id=m.member_id")
-            ->where(array('m.pid'=>$member_id))
-            ->order("m.reg_time desc ")
-            ->limit($Page->firstRow.','.$Page->listRows)->select();
-
-        $this->assign('my_invit',$my_invit);
-        $this->assign('page',$show);// 赋值分页输出
-        $this->display(); // 输出模板
-
     }
     /**
      * 修改会员
@@ -502,25 +343,5 @@ class MemberController extends AdminController {
         $this->ajaxReturn($data);
     }
 
-   /*成为优先匹配者*/
-   public function become_priority(){
-       $member_id = I('get.member_id','','intval');
-
-       $where['member_id']= $member_id;
-       $member_info = M('member_info')->where($where)->find();
-       if(!$member_info){
-           $this->error('该用户还未上传收款二维码');
-           return;
-       }
-       $r = M('member_info')->where($where)->save(array('is_priority'=>1));
-       if($r){
-           $this->success('操作成功',U('Member/index'));
-           return;
-       }else{
-           $this->error('操作失败');
-           return;
-       }
-   }
-    
     
 }

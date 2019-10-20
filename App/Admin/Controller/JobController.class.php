@@ -252,7 +252,7 @@ class JobController extends AdminController {
         }
 
         $id = I('post.id','','intval');
-        $model = I('post.model','','intval');
+        $model = I('post.model');
         $r = M($model)->delete($id);
 
         if(!$r){
